@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Abraham Dier Spiez | Leadership &amp; Process</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;700;800&amp;family=Inter:wght@300;400;500;600&amp;family=Space+Grotesk:wght@300;400;500;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    .hide-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-container-highest": "#e3e2e1",
+            "on-primary": "#ffffff",
+            "on-error-container": "#93000a",
+            "primary-fixed": "#d2e4fb",
+            "secondary-fixed": "#ffdbd2",
+            "tertiary-container": "#442000",
+            "secondary": "#9a442d",
+            "secondary-container": "#fc9174",
+            "on-tertiary": "#ffffff",
+            "on-background": "#1a1c1c",
+            "primary-fixed-dim": "#b7c8de",
+            "error": "#ba1a1a",
+            "inverse-on-surface": "#f1f0f0",
+            "tertiary-fixed": "#ffdcc4",
+            "on-primary-fixed-variant": "#38485a",
+            "secondary-fixed-dim": "#ffb4a1",
+            "error-container": "#ffdad6",
+            "tertiary": "#260f00",
+            "on-error": "#ffffff",
+            "on-secondary": "#ffffff",
+            "surface-dim": "#dadad9",
+            "tertiary-fixed-dim": "#ffb780",
+            "inverse-surface": "#2f3130",
+            "surface": "#faf9f8",
+            "background": "#faf9f8",
+            "surface-container-low": "#f4f3f2",
+            "on-tertiary-fixed": "#2f1400",
+            "on-tertiary-container": "#ca7f41",
+            "on-secondary-fixed": "#3c0800",
+            "on-surface": "#1a1c1c",
+            "on-primary-container": "#8192a7",
+            "surface-variant": "#e3e2e1",
+            "outline-variant": "#c4c6cd",
+            "surface-tint": "#4f6073",
+            "primary": "#041627",
+            "surface-container-lowest": "#ffffff",
+            "on-tertiary-fixed-variant": "#6f3800",
+            "surface-container": "#eeeeed",
+            "on-secondary-fixed-variant": "#7c2e19",
+            "outline": "#74777d",
+            "on-primary-fixed": "#0b1d2d",
+            "on-surface-variant": "#44474c",
+            "surface-container-high": "#e9e8e7",
+            "on-secondary-container": "#742814",
+            "primary-container": "#1a2b3c",
+            "inverse-primary": "#b7c8de",
+            "surface-bright": "#faf9f8"
+          },
+          fontFamily: {
+            "headline": ["Manrope"],
+            "body": ["Inter"],
+            "label": ["Space Grotesk"]
+          },
+          borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+        },
+      },
+    }
+  </script>
+</head>
+
+<body class="bg-surface text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
+  <!-- TopAppBar -->
+  <header class="fixed top-0 w-full z-50 bg-[#faf9f8]/80 dark:bg-[#041627]/80 backdrop-blur-md">
+    <nav class="flex justify-between items-center max-w-7xl mx-auto px-8 py-6">
+      <a class="font-manrope font-black tracking-tighter text-xl text-[#041627] dark:text-[#faf9f8]" href="index.html">
+        Abraham Dier Spiez
+      </a>
+      <div class="hidden md:flex items-center space-x-12">
+        <a class="font-manrope tracking-tight font-bold uppercase text-sm text-[#041627] dark:text-[#faf9f8] opacity-70 hover:opacity-100 hover:text-[#9a442d] transition-all duration-300"
+          href="index.html#work">Work</a>
+        <a class="font-manrope tracking-tight font-bold uppercase text-sm text-[#041627] dark:text-[#faf9f8] opacity-70 hover:opacity-100 hover:text-[#9a442d] transition-all duration-300"
+          href="technical.html">Architecture</a>
+        <a class="font-manrope tracking-tight font-bold uppercase text-sm text-[#9a442d] border-b-2 border-[#9a442d] pb-1"
+          href="leadership.html">Process</a>
+        <a class="font-manrope tracking-tight font-bold uppercase text-sm text-[#041627] dark:text-[#faf9f8] opacity-70 hover:opacity-100 hover:text-[#9a442d] transition-all duration-300"
+          href="index.html#about">About</a>
+      </div>
+      <a class="font-manrope tracking-tight font-bold uppercase text-sm px-6 py-2 bg-primary text-on-primary hover:bg-primary-container transition-colors duration-200 inline-block text-center"
+        href="contact.html">
+        Contact
+      </a>
+    </nav>
+  </header>
+  <main class="pt-32 pb-20">
+    <!-- Hero Section -->
+    <section class="max-w-7xl mx-auto px-8 mb-24">
+      <div class="flex flex-col md:flex-row gap-16 items-end">
+        <div class="md:w-2/3">
+          <span class="font-label text-secondary uppercase tracking-[0.3em] text-sm mb-6 block">Leadership &amp;
+            Impact</span>
+          <h1
+            class="font-headline text-5xl md:text-7xl font-extrabold tracking-tighter text-primary leading-[0.9] mb-8">
+            Leading Web Development at Scale.
+          </h1>
+          <p class="font-body text-xl md:text-2xl text-on-surface-variant leading-relaxed max-w-2xl">
+            Leading teams to build robust, scalable web ecosystems that bridge technology and human needs.
+          </p>
+        </div>
+        <div class="md:w-1/3 flex flex-col items-start md:items-end">
+          <div class="bg-surface-container-low p-8 w-full md:w-auto min-w-[280px]">
+            <p class="font-label text-xs text-outline tracking-widest uppercase mb-2">Current Role</p>
+            <h2 class="font-headline text-2xl font-bold text-primary mb-4">Head of Web Development</h2>
+            <div class="flex gap-2">
+              <span
+                class="font-label text-[10px] bg-primary-fixed-dim text-on-primary-fixed px-2 py-1 uppercase">Architecture</span>
+              <span
+                class="font-label text-[10px] bg-primary-fixed-dim text-on-primary-fixed px-2 py-1 uppercase">Strategy</span>
+              <span
+                class="font-label text-[10px] bg-primary-fixed-dim text-on-primary-fixed px-2 py-1 uppercase">Mentorship</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Image Break -->
+    <section class="w-full mb-32">
+      <div class="h-[614px] w-full bg-surface-container overflow-hidden">
+        <img alt="Office Interior" class="w-full h-full object-cover grayscale contrast-125 opacity-90"
+          data-alt="Modern architectural office space with minimalist concrete walls, large windows, and warm wooden accents in soft natural daylight"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZFmFJwx1ADJeR-G0hYzp8g8kGpWzNDa9YE3qTxnvxttkXZ9PZrkSPVUDvUyQ8NpuCEwzpqYvN8fNyKxDE5U1jhshxteydLFH41jdbNqW_-0bn47paeVbF7sU1FJtOW0mezf9_VwD6HNrXzSZF29Or2j_oPNPGXyh3_R6RsPaShSwo7mui_M8Q4IRABd7PCIV5eiQpcZyAJbt44ko2EIlb1Ymip1a5gpb2WBaTlaqGU_gUKIx17WtjD5KVc-hvLMrIMWBrg7P64n8k" />
+      </div>
+    </section>
+    <!-- Design system: logistics & operations -->
+    <section class="max-w-7xl mx-auto px-8 mb-32 border-t border-outline-variant/10 pt-24">
+      <div class="max-w-3xl">
+        <span class="font-label text-secondary uppercase tracking-[0.3em] text-xs mb-4 block">Process</span>
+        <h2 class="font-headline text-3xl md:text-4xl font-bold text-primary tracking-tighter mb-8">Why a design
+          system matters in logistics software</h2>
+        <p class="font-body text-lg text-on-surface-variant leading-relaxed mb-6">
+          Operations platforms—ERP, container tracking, fleet, and partner portals—serve different roles but the same
+          reality: exceptions, SLAs, and handoffs have to read clearly under time pressure. A design system encodes that
+          shared language: consistent patterns for status, alerts, tables, and workflows so dispatch, finance, and field
+          teams interpret data the same way. That is the same idea global logistics enterprises publish around their
+          systems: one documented component layer and token set so dozens of products stay aligned instead of
+          reinventing
+          screens in every sprint.
+        </p>
+        <p class="font-body text-lg text-on-surface-variant leading-relaxed">
+          Practically, the system is the contract between design and engineering—Storybook (or equivalent), accessible
+          defaults, and governance so new modules (e.g. transport management vs. internal ops tools) reuse layouts and
+          reduce rework. The outcome is faster delivery without fragmenting UX: what ships in one product line still
+          feels
+          like the same company when a user moves from tracking to billing to compliance.
+        </p>
+      </div>
+    </section>
+    <!-- Core Ecosystems -->
+    <section class="max-w-7xl mx-auto px-8 mb-40">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+        <div class="md:col-span-12">
+          <h3 class="font-headline text-3xl font-bold mb-12">Core Ecosystems</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Project Card 1 -->
+            <div
+              class="bg-surface-container-low p-1 group cursor-pointer transition-all duration-500 hover:bg-surface-container-high">
+              <div class="h-64 overflow-hidden mb-6 relative">
+                <img alt="Project Alpha"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  data-alt="Detailed data visualization dashboard with blue and orange metrics on a clean white digital interface"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDI7Y7WsQ2WhhNAWh9R9B0M6cVxCYoR03uGkkRZr7W4lPkUWYAhJscLgN55DPNV2CVnWd5xg0u_RgfR8YHRBAqVy8lBvxtxIYtpmbYms2AcEXKCClDk89E2qqUNnD3_5FpCYsV0lefGF5krPrt2EPT6oWCsZMVvEeKngT1vl0g9v5fR2A1JqxAmFTb_0ZpRoBJ9TZEpD6yfZkFs8DGMsMb9KkfnPZDuHyHEAsUufk6ntZoP0TYjk_WqOJllWe1vBN_ONU8Z3OylxLMx" />
+                <div class="absolute inset-0 bg-primary/10 mix-blend-multiply transition-opacity group-hover:opacity-0">
+                </div>
+              </div>
+              <div class="p-6">
+                <div class="flex justify-between items-start mb-4">
+                  <h5 class="font-headline text-xl font-bold">Horizon Dashboard</h5>
+                  <span
+                    class="material-symbols-outlined text-secondary opacity-0 group-hover:opacity-100 transition-opacity">arrow_outward</span>
+                </div>
+                <p class="font-body text-sm text-on-surface-variant mb-6 leading-relaxed">A global analytics platform
+                  serving 2M+ users daily with sub-second latency.</p>
+                <div class="flex gap-2 flex-wrap">
+                  <span
+                    class="font-label text-[10px] text-outline border border-outline-variant px-2 py-1">Next.js</span>
+                  <span
+                    class="font-label text-[10px] text-outline border border-outline-variant px-2 py-1">GraphQL</span>
+                  <span class="font-label text-[10px] text-outline border border-outline-variant px-2 py-1">AWS</span>
+                </div>
+              </div>
+            </div>
+            <!-- Project Card 2 -->
+            <div
+              class="bg-surface-container-low p-1 group cursor-pointer transition-all duration-500 hover:bg-surface-container-high mt-12 md:mt-24">
+              <div class="h-64 overflow-hidden mb-6 relative">
+                <img alt="Project Beta"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  data-alt="Abstract architectural wireframe showing structural lines and nodes in a technical blueprint aesthetic"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxJyQmxwf9eh0bSf8pvbQEsizvuvsUGb7ece_06jLy4tmFMtzqiK2Z349akpiD38d_2xh-pa01-g4oNQKE3HBE6T2mLr-bn8brezFBbRurjYbXXZIP1lf4FB-jjXs18pLjwpPGvGW5yqRjo5_u94qLttAXXcqIjnEqyeFbb3Yj_2q4hYCgGVzmSJhFkVGuh0KjKym1SKr5FwCc2U7Qgw2rzHVedaOejUfbo_iDOKdonb-lHFycCYzSf6eBePVE9IVWW_oDzLUNIXx7" />
+                <div class="absolute inset-0 bg-primary/10 mix-blend-multiply transition-opacity group-hover:opacity-0">
+                </div>
+              </div>
+              <div class="p-6">
+                <div class="flex justify-between items-start mb-4">
+                  <h5 class="font-headline text-xl font-bold">Nexus Design System</h5>
+                  <span
+                    class="material-symbols-outlined text-secondary opacity-0 group-hover:opacity-100 transition-opacity">arrow_outward</span>
+                </div>
+                <p class="font-body text-sm text-on-surface-variant mb-6 leading-relaxed">The unified visual language
+                  for 14 cross-functional product teams.</p>
+                <div class="flex gap-2 flex-wrap">
+                  <span
+                    class="font-label text-[10px] text-outline border border-outline-variant px-2 py-1">Tailwind</span>
+                  <span
+                    class="font-label text-[10px] text-outline border border-outline-variant px-2 py-1">TypeScript</span>
+                  <span
+                    class="font-label text-[10px] text-outline border border-outline-variant px-2 py-1">Storybook</span>
+                </div>
+              </div>
+            </div>
+            <!-- Project Card 3 -->
+            <div
+              class="bg-surface-container-low p-1 group cursor-pointer transition-all duration-500 hover:bg-surface-container-high -mt-12">
+              <div class="h-64 overflow-hidden mb-6 relative">
+                <img alt="Project Gamma"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  data-alt="Digital representation of a global network with glowing nodes and fiber optic connections in deep navy blue"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuD94QZ0zvpXGeUiEYWvrs3oAONTf9epx-vCMP6POlc_wLazTLoWx8tA0y3mmOmFIitsijEqHN6VMlvivlpO_aMNvCD-Ji2ovz_WAR71C0JViXezPOvdcz90yHBRWWO6Cba7bDMb_okxauNIoy5geH9Aqkivy44FaXuUl4t0LyKC5LwmVPZFf-6rL4LQCQxASyhmpGOrkm8CbmFiPRwmRsRk8F8AWbQ8wsfsPPk3X_nyO0qLS3-MVtpfdZ7Nz2AZiwZwALqOH9vesn9q" />
+                <div class="absolute inset-0 bg-primary/10 mix-blend-multiply transition-opacity group-hover:opacity-0">
+                </div>
+              </div>
+              <div class="p-6">
+                <div class="flex justify-between items-start mb-4">
+                  <h5 class="font-headline text-xl font-bold">Vanguard API Layer</h5>
+                  <span
+                    class="material-symbols-outlined text-secondary opacity-0 group-hover:opacity-100 transition-opacity">arrow_outward</span>
+                </div>
+                <p class="font-body text-sm text-on-surface-variant mb-6 leading-relaxed">Centralized gateway managing
+                  500M+ requests per month with zero downtime.</p>
+                <div class="flex gap-2 flex-wrap">
+                  <span
+                    class="font-label text-[10px] text-outline border border-outline-variant px-2 py-1">Node.js</span>
+                  <span class="font-label text-[10px] text-outline border border-outline-variant px-2 py-1">Redis</span>
+                  <span
+                    class="font-label text-[10px] text-outline border border-outline-variant px-2 py-1">Docker</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Leadership Philosophy Bento -->
+    <section class="max-w-7xl mx-auto px-8 mb-40">
+      <h3 class="font-headline text-3xl font-bold mb-12">Leadership Philosophy</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-primary p-12 text-on-primary col-span-1 md:col-span-2">
+          <h4 class="font-headline text-4xl font-extrabold mb-8 tracking-tighter">Technically Intentional. Humanly
+            Driven.</h4>
+          <p class="font-body text-lg opacity-80 leading-relaxed max-w-xl">
+            I believe that great architecture is invisible. It should empower users and developers alike, creating a
+            path of least resistance from idea to impact. My leadership style centers on extreme clarity, psychological
+            safety, and radical technical excellence.
+          </p>
+        </div>
+        <div class="bg-secondary-container p-12 text-on-secondary-container flex flex-col justify-between">
+          <span class="material-symbols-outlined text-5xl">groups</span>
+          <div>
+            <h5 class="font-headline text-2xl font-bold mb-4">The Team First</h5>
+            <p class="font-body text-sm">Empowering talent through mentorship, clear career paths, and a culture of
+              continuous learning.</p>
+          </div>
+        </div>
+        <div class="bg-surface-container-low p-12 flex flex-col justify-between">
+          <span class="material-symbols-outlined text-4xl text-secondary">architecture</span>
+          <div>
+            <h5 class="font-headline text-2xl font-bold mb-4 text-primary">Scalable Design</h5>
+            <p class="font-body text-sm text-on-surface-variant">Building systems that don't just work today, but evolve
+              with the business tomorrow.</p>
+          </div>
+        </div>
+        <div class="bg-surface-container-low p-12 md:col-span-2 flex flex-col md:flex-row gap-8 items-center">
+          <div class="flex-1">
+            <h5 class="font-headline text-2xl font-bold mb-4 text-primary">Bridging the Gap</h5>
+            <p class="font-body text-sm text-on-surface-variant">Translating high-level business strategy into
+              actionable technical roadmaps for engineering teams.</p>
+          </div>
+          <div class="flex-1 grid grid-cols-2 gap-4">
+            <div class="text-center">
+              <p class="font-headline text-4xl font-black text-secondary">40+</p>
+              <p class="font-label text-[10px] uppercase text-outline">Engineers Led</p>
+            </div>
+            <div class="text-center">
+              <p class="font-headline text-4xl font-black text-secondary">100+</p>
+              <p class="font-label text-[10px] uppercase text-outline">Products Launched</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Call to Action -->
+    <section class="max-w-7xl mx-auto px-8 py-32 border-t border-outline-variant">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-12">
+        <div class="max-w-2xl text-center md:text-left">
+          <h3 class="font-headline text-4xl md:text-6xl font-bold text-primary mb-6 tracking-tight">Ready to scale your
+            next ecosystem?</h3>
+          <p class="font-body text-on-surface-variant text-xl">Let's discuss how technical leadership can transform your
+            product's future.</p>
+        </div>
+        <a class="group inline-flex items-center gap-4 bg-primary text-on-primary px-10 py-5 font-headline font-bold uppercase tracking-widest text-sm hover:bg-secondary transition-all duration-300"
+          href="contact.html">
+          Get in Touch
+          <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+        </a>
+      </div>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+  <script src="footer-include.js"></script>
+</body>
+
+</html>

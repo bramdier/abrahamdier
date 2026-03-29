@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Abraham Dier Spiez | Software Engineer</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500&amp;family=Space+Grotesk:wght@400;500;700&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-container-highest": "#e3e2e1",
+            "on-primary": "#ffffff",
+            "on-error-container": "#93000a",
+            "primary-fixed": "#d2e4fb",
+            "secondary-fixed": "#ffdbd2",
+            "tertiary-container": "#442000",
+            "secondary": "#9a442d",
+            "secondary-container": "#fc9174",
+            "on-tertiary": "#ffffff",
+            "on-background": "#1a1c1c",
+            "primary-fixed-dim": "#b7c8de",
+            "error": "#ba1a1a",
+            "inverse-on-surface": "#f1f0f0",
+            "tertiary-fixed": "#ffdcc4",
+            "on-primary-fixed-variant": "#38485a",
+            "secondary-fixed-dim": "#ffb4a1",
+            "error-container": "#ffdad6",
+            "tertiary": "#260f00",
+            "on-error": "#ffffff",
+            "on-secondary": "#ffffff",
+            "surface-dim": "#dadad9",
+            "tertiary-fixed-dim": "#ffb780",
+            "inverse-surface": "#2f3130",
+            "surface": "#faf9f8",
+            "background": "#faf9f8",
+            "surface-container-low": "#f4f3f2",
+            "on-tertiary-fixed": "#2f1400",
+            "on-tertiary-container": "#ca7f41",
+            "on-secondary-fixed": "#3c0800",
+            "on-surface": "#1a1c1c",
+            "on-primary-container": "#8192a7",
+            "surface-variant": "#e3e2e1",
+            "outline-variant": "#c4c6cd",
+            "surface-tint": "#4f6073",
+            "primary": "#041627",
+            "surface-container-lowest": "#ffffff",
+            "on-tertiary-fixed-variant": "#6f3800",
+            "surface-container": "#eeeeed",
+            "on-secondary-fixed-variant": "#7c2e19",
+            "outline": "#74777d",
+            "on-primary-fixed": "#0b1d2d",
+            "on-surface-variant": "#44474c",
+            "surface-container-high": "#e9e8e7",
+            "on-secondary-container": "#742814",
+            "primary-container": "#1a2b3c",
+            "inverse-primary": "#b7c8de",
+            "surface-bright": "#faf9f8"
+          },
+          fontFamily: {
+            "headline": ["Manrope"],
+            "body": ["Inter"],
+            "label": ["Space Grotesk"]
+          },
+          borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+        },
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      vertical-align: middle;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: 'Manrope', sans-serif;
+    }
+
+    .label-text {
+      font-family: 'Space Grotesk', sans-serif;
+    }
+  </style>
+</head>
+
+<body class="bg-surface text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
+  <!-- TopAppBar -->
+  <header class="fixed top-0 w-full z-50 bg-[#faf9f8]/80 dark:bg-[#041627]/80 backdrop-blur-md">
+    <nav class="flex justify-between items-center max-w-7xl mx-auto px-8 py-6">
+      <a class="font-manrope font-black tracking-tighter text-xl text-[#041627] dark:text-[#faf9f8]" href="index.html">
+        Abraham Dier Spiez
+      </a>
+      <div class="hidden md:flex items-center space-x-12">
+        <a class="font-manrope tracking-tight font-bold uppercase text-sm text-[#041627] dark:text-[#faf9f8] opacity-70 hover:opacity-100 hover:text-[#9a442d] transition-all duration-300"
+          href="index.html#work">Work</a>
+        <a class="font-manrope tracking-tight font-bold uppercase text-sm text-[#041627] dark:text-[#faf9f8] opacity-70 hover:opacity-100 hover:text-[#9a442d] transition-all duration-300"
+          href="technical.html">Architecture</a>
+        <a class="font-manrope tracking-tight font-bold uppercase text-sm text-[#041627] dark:text-[#faf9f8] opacity-70 hover:opacity-100 hover:text-[#9a442d] transition-all duration-300"
+          href="leadership.html">Process</a>
+        <a class="font-manrope tracking-tight font-bold uppercase text-sm text-[#041627] dark:text-[#faf9f8] opacity-70 hover:opacity-100 hover:text-[#9a442d] transition-all duration-300"
+          href="index.html#about">About</a>
+      </div>
+      <a class="font-manrope tracking-tight font-bold uppercase text-sm px-6 py-2 bg-primary text-on-primary hover:bg-primary-container transition-all scale-95 duration-200 ease-in-out inline-block text-center"
+        href="contact.html">
+        Contact
+      </a>
+    </nav>
+  </header>
+  <main class="pt-32">
+    <!-- Hero Section: The Digital Architect's Atelier -->
+    <section class="max-w-7xl mx-auto px-8 mb-32">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
+        <div class="md:col-span-8">
+          <span class="label-text text-secondary font-bold tracking-widest text-xs uppercase mb-6 block">Software
+            Engineer</span>
+          <h1
+            class="text-display-lg text-6xl md:text-8xl font-extrabold tracking-tight text-primary leading-[0.9] mb-8">
+            Abraham Dier Spiez
+          </h1>
+          <p class="text-xl md:text-2xl text-on-surface-variant max-w-2xl font-medium leading-relaxed">
+            Designing technical systems with human intentionality. Bridging the gap between rigid architecture and
+            tactile experience.
+          </p>
+        </div>
+        <div class="md:col-span-4 flex justify-end">
+          <div class="relative group">
+            <div
+              class="absolute -inset-4 bg-secondary-container/20 blur-2xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+            </div>
+            <img alt="Professional portrait"
+              class="relative w-64 h-64 md:w-80 md:h-80 object-cover grayscale hover:grayscale-0 transition-all duration-500 rounded-none border-b-8 border-secondary"
+              data-alt="Close-up artistic portrait of a professional man in a minimalist studio, soft natural side lighting, muted earth tones"
+              src="hero.JPG" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Experience Summary: Logical Asymmetry -->
+    <section class="bg-surface-container-low py-24 mb-32">
+      <div class="max-w-7xl mx-auto px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+          <div class="space-y-4">
+            <div class="flex items-center gap-3 text-secondary mb-4">
+              <span class="material-symbols-outlined" data-icon="architecture">architecture</span>
+              <span class="label-text font-bold uppercase tracking-widest text-xs">Structural Logic</span>
+            </div>
+            <h3 class="text-2xl font-bold text-primary">Scalable Foundations</h3>
+            <p class="text-on-surface-variant leading-relaxed">Architecting robust frontend ecosystems that sustain
+              rapid growth without sacrificing maintainability or performance metrics.</p>
+          </div>
+          <div class="space-y-4">
+            <div class="flex items-center gap-3 text-secondary mb-4">
+              <span class="material-symbols-outlined" data-icon="brush">brush</span>
+              <span class="label-text font-bold uppercase tracking-widest text-xs">Human Interface</span>
+            </div>
+            <h3 class="text-2xl font-bold text-primary">Intentional Design</h3>
+            <p class="text-on-surface-variant leading-relaxed">Prioritizing the end-user's tactile experience. Every
+              interaction is weighted, purposeful, and technologically grounded.</p>
+          </div>
+          <div class="space-y-4">
+            <div class="flex items-center gap-3 text-secondary mb-4">
+              <span class="material-symbols-outlined" data-icon="terminal">terminal</span>
+              <span class="label-text font-bold uppercase tracking-widest text-xs">Technical Craft</span>
+            </div>
+            <h3 class="text-2xl font-bold text-primary">Engineering Excellence</h3>
+            <p class="text-on-surface-variant leading-relaxed">Leading teams through complex migrations, performance
+              optimizations, and the implementation of high-fidelity design systems.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Technical Deep Dives: The Bento Grid -->
+    <section class="max-w-7xl mx-auto px-8 mb-32 scroll-mt-32" id="work">
+      <div class="flex justify-between items-end mb-12">
+        <div>
+          <h2 class="text-4xl font-black text-primary tracking-tighter">Technical Deep Dives</h2>
+          <p class="text-on-surface-variant mt-2 font-body">Selected explorations into web architecture and systems.</p>
+        </div>
+        <a class="hidden md:flex items-center gap-2 text-secondary font-bold label-text uppercase text-xs tracking-widest group"
+          href="technical.html">
+          View All Projects
+          <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform"
+            data-icon="arrow_forward">arrow_forward</span>
+        </a>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+        <!-- Large Feature -->
+        <div
+          class="md:col-span-8 bg-surface-container-lowest p-8 group cursor-pointer border border-outline-variant/10 hover:border-secondary/30 transition-all duration-500">
+          <div class="aspect-video mb-8 overflow-hidden">
+            <img alt="Architecture diagram"
+              class="w-full h-full object-cover scale-100 group-hover:scale-105 transition-transform duration-700"
+              data-alt="High-contrast technical architectural diagram of a cloud infrastructure with clean white lines on a deep navy background"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPSyz1_3qt0aNcSqdcZLlQEbUpAEHShmkVmZk82HmyyeCGWGOB09qlFYwjm4uCMj1UBQKx_h2eBnBNH8tTyVXUlpSymBgBCBdcXwR2MOeAMi064THeTRXcZZMwcvP5UgRzo6Ka5AjSv3ZDPGSmo0PhdTahrGQCk9DroVggZ08vS1bqxc_jKJkYNFdlgyWDaBjYTSuBh5IGIbJOKLD2KHO4UTE4AyimjX66Tei7FLEA9HbVfkfcQ0yA8dcG6k1pBHlglj_pwEb2uD7S" />
+          </div>
+          <div class="flex justify-between items-start">
+            <div class="max-w-xl">
+              <div class="flex gap-2 mb-4">
+                <span
+                  class="px-2 py-1 bg-primary-fixed-dim text-on-primary-fixed label-text text-[10px] font-bold uppercase">React</span>
+                <span
+                  class="px-2 py-1 bg-primary-fixed-dim text-on-primary-fixed label-text text-[10px] font-bold uppercase">Web-GL</span>
+              </div>
+              <h3 class="text-3xl font-bold text-primary mb-2">Omni-Channel Design Systems</h3>
+              <p class="text-on-surface-variant">Building a unified component library for a global fintech provider,
+                supporting 4M+ active daily users across web and mobile surfaces.</p>
+            </div>
+            <span
+              class="material-symbols-outlined text-4xl text-secondary/20 group-hover:text-secondary transition-colors"
+              data-icon="north_east">north_east</span>
+          </div>
+        </div>
+        <!-- Small Grid Items -->
+        <div class="md:col-span-4 flex flex-col gap-6">
+          <div class="bg-surface-container-low p-6 group cursor-pointer hover:bg-surface-container-high transition-all">
+            <span class="label-text text-secondary font-bold text-[10px] uppercase mb-4 block">Process</span>
+            <h4 class="text-xl font-bold text-primary mb-4">Micro-Frontend Orchestration</h4>
+            <p class="text-sm text-on-surface-variant mb-6">Strategy for decoupling legacy monoliths into modern,
+              manageable units.</p>
+            <div class="w-full h-1 bg-outline-variant/20 relative overflow-hidden">
+              <div class="absolute inset-0 bg-secondary w-0 group-hover:w-full transition-all duration-700"></div>
+            </div>
+          </div>
+          <div class="bg-primary p-6 group cursor-pointer text-on-primary">
+            <span class="label-text text-secondary-container font-bold text-[10px] uppercase mb-4 block">Case
+              Study</span>
+            <h4 class="text-xl font-bold mb-4">Performance at Scale</h4>
+            <p class="text-sm opacity-70 mb-6">Reducing TBT by 40% through aggressive code-splitting and asset
+              prioritization.</p>
+            <span class="material-symbols-outlined" data-icon="bolt" data-weight="fill"
+              style="font-variation-settings: 'FILL' 1;">bolt</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Experience Detail Section -->
+    <section class="max-w-7xl mx-auto px-8 mb-32 border-t border-outline-variant/10 pt-24 scroll-mt-32" id="about">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+        <div class="md:col-span-4">
+          <h2 class="text-3xl font-black text-primary tracking-tighter sticky top-32">Experience Summary</h2>
+        </div>
+        <div class="md:col-span-8 space-y-16">
+          <div class="relative pl-8 border-l-2 border-outline-variant/30">
+            <div class="absolute -left-1.5 top-0 w-3 h-3 bg-secondary rounded-full"></div>
+            <span class="label-text text-xs font-bold text-secondary uppercase tracking-widest">July 2025 —
+              Present</span>
+            <h4 class="text-2xl font-bold text-primary mt-2">Head of Web Development | Trans Continent</h4>
+            <p class="text-on-surface-variant mt-4 leading-relaxed">Developed SOLOG, an internal ERP for logistics
+              operations, along with CTMS to track 500+ containers, implemented a shared role-based architecture for
+              security, deployed a real-time fleet tracking system, and standardized IT protocols including
+              documentation and change management.</p>
+          </div>
+          <div class="relative pl-8 border-l-2 border-outline-variant/30">
+            <div class="absolute -left-1.5 top-0 w-3 h-3 bg-primary rounded-full"></div>
+            <span class="label-text text-xs font-bold text-on-surface-variant uppercase tracking-widest">April 2025 —
+              December 2025</span>
+            <h4 class="text-2xl font-bold text-primary mt-2">Systems Architect | Semesta Energy Services</h4>
+            <p class="text-on-surface-variant mt-4 leading-relaxed">Developed DSAS (Dynamic Scheduling Automation
+              System) for Pertamina to optimize the distribution and planning of crude oil, LPG, and fuel products.</p>
+          </div>
+          <div class="relative pl-8 border-l-2 border-outline-variant/30">
+            <div class="absolute -left-1.5 top-0 w-3 h-3 bg-primary rounded-full"></div>
+            <span class="label-text text-xs font-bold text-on-surface-variant uppercase tracking-widest">May 2023 —
+              March 2025</span>
+            <h4 class="text-2xl font-bold text-primary mt-2">Software Engineer | KB Insurance Indonesia</h4>
+            <p class="text-on-surface-variant mt-4 leading-relaxed">Developed a comprehensive enterprise portal
+              including a Project Information Workshop for external stakeholders, eAudit module for risk management,
+              Customer Data Agreement for compliance, eStock for centralized asset management, and a dual-sided
+              eProcurement platform to streamline bidding and reduce costs.</p>
+          </div>
+          <div class="relative pl-8 border-l-2 border-outline-variant/30">
+            <div class="absolute -left-1.5 top-0 w-3 h-3 bg-primary rounded-full"></div>
+            <span class="label-text text-xs font-bold text-on-surface-variant uppercase tracking-widest">September 2022
+              —
+              April 2023</span>
+            <h4 class="text-2xl font-bold text-primary mt-2">Computer Science Teacher | Penabur Primary Kelapa Gading
+            </h4>
+            <p class="text-on-surface-variant mt-4 leading-relaxed">Enhanced digital literacy and computational thinking
+              through interactive coding, built a technology-integrated learning environment to boost engagement,
+              implemented a digital safety curriculum, introduced project-based STEM learning, and improved teaching
+              efficiency through digital tools.</p>
+          </div>
+          <div class="relative pl-8 border-l-2 border-outline-variant/30">
+            <div class="absolute -left-1.5 top-0 w-3 h-3 bg-primary rounded-full"></div>
+            <span class="label-text text-xs font-bold text-on-surface-variant uppercase tracking-widest">July 2019
+              —
+              September 2022</span>
+            <h4 class="text-2xl font-bold text-primary mt-2">IT &amp; LMS Developer | Gunadarma University</h4>
+            <p class="text-on-surface-variant mt-4 leading-relaxed">Developed a Learning Management System (LMS) for
+              500+
+              students at Gunadarma University and engineered Virtual Machine solutions to streamline remote educational
+              access.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- CTA Section -->
+    <section class="max-w-7xl mx-auto px-8 mb-32">
+      <div class="bg-primary-container p-12 md:p-24 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-secondary/5 -skew-x-12 translate-x-1/4"></div>
+        <div class="relative z-10 max-w-2xl">
+          <h2 class="text-4xl md:text-5xl font-extrabold text-on-primary mb-8 leading-tight">Ready to build something
+            with technical intentionality?</h2>
+          <div class="flex flex-wrap gap-4">
+            <a class="inline-block bg-secondary text-on-secondary px-8 py-4 font-bold label-text uppercase tracking-widest text-sm hover:bg-secondary-container transition-colors text-center"
+              href="contact.html">
+              Start a Conversation
+            </a>
+            <a class="inline-block border border-on-primary/20 text-on-primary px-8 py-4 font-bold label-text uppercase tracking-widest text-sm hover:bg-on-primary/10 transition-colors text-center"
+              href="https://cv-bram.vercel.app/" target="_blank" rel="noopener noreferrer">
+              View resume
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div id="site-footer"></div>
+  <script src="footer-include.js"></script>
+</body>
+
+</html>
