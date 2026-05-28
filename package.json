@@ -1,0 +1,16 @@
+{
+  "name": "resume-abraham",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/input.css -o ./css/styles.css --minify",
+    "watch:css": "tailwindcss -i ./src/input.css -o ./css/styles.css --watch",
+    "build": "npm run build:css",
+    "dev": "npm run watch:css",
+    "preview": "npx --yes serve . -l 3000"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.8",
+    "tailwindcss": "^4.1.8"
+  }
+}

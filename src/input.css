@@ -1,0 +1,32 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+@source "../index.html";
+@source "../header.html";
+@source "../footer.html";
+
+@layer base {
+  body {
+    font-family: "Inter", sans-serif;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: "Manrope", sans-serif;
+  }
+}
+
+@layer components {
+  .label-text {
+    font-family: "Space Grotesk", sans-serif;
+  }
+
+  .tab-panel[hidden] {
+    display: none;
+  }
+
+  .tab-btn[aria-selected="true"] {
+    color: #9a442d;
+    border-bottom-color: #9a442d;
+  }
+}
