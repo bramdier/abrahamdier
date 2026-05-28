@@ -4,8 +4,9 @@
   "type": "module",
   "scripts": {
     "build:css": "tailwindcss -i ./src/input.css -o ./css/styles.css --minify",
+    "build:public": "node scripts/build-public.mjs",
     "watch:css": "tailwindcss -i ./src/input.css -o ./css/styles.css --watch",
-    "build": "npm run build:css",
+    "build": "npm run build:css && npm run build:public",
     "dev": "npm run watch:css",
     "preview": "npx --yes serve . -l 3000"
   },
