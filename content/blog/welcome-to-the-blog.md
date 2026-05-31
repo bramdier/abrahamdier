@@ -1,24 +1,26 @@
 ---
-title: Welcome to the Blog
-date: 2026-05-31T10:00:00.000Z
-description: A short introduction to this blog — notes on engineering, logistics systems, and building software.
+title: Sepotong ayat hari ini
+slug: jesus, pergumulan, belajar
+date: 2026-05-31T15:12:00.000+07:00
+description: '"Marilah kepada-Ku, semua yang letih lesu dan berbeban berat, Aku
+  akan memberi kelegaan kepadamu." — Injil Matius 11:28'
 draft: false
 ---
 
-This is the first post on the blog. Posts are written in **Markdown**, stored in `content/blog/`, and published automatically when you push to GitHub — Vercel rebuilds the site on every deploy.
 
-## What you'll find here
+**Renungan**
 
-- Project notes and lessons learned from logistics and enterprise software work
-- Technical write-ups on architecture, integrations, and automation
-- Occasional thoughts on leadership and delivery
+Dalam masa pergumulan, sering kali kita merasa harus kuat menghadapi semuanya sendiri. Kita berusaha mencari jalan keluar, memikirkan berbagai kemungkinan, dan memikul beban yang terasa semakin berat dari hari ke hari. Namun Yesus tidak pernah meminta kita untuk menanggung semuanya sendirian.
 
-## Editing posts
+Yesus mengundang setiap orang yang lelah, terluka, kecewa, takut, atau bingung untuk datang kepada-Nya. Ia tidak mengatakan bahwa masalah akan langsung hilang, tetapi Ia berjanji memberikan kelegaan dan kekuatan untuk menjalani setiap proses yang ada di depan kita.
 
-You can edit posts in three ways:
+Sering kali Tuhan bekerja bukan dengan menghilangkan badai seketika, melainkan dengan menyertai kita di tengah badai tersebut. Ketika kita merasa tidak sanggup, kasih karunia-Nya tetap cukup. Ketika kita kehilangan arah, firman-Nya menjadi pelita. Ketika kita merasa sendirian, kehadiran-Nya tetap nyata meskipun tidak selalu kita rasakan secara emosional.
 
-1. **Decap CMS** — open `/admin/` on your deployed site (after GitHub OAuth setup)
-2. **Locally** — add or edit `.md` files in `content/blog/`
-3. **GitHub** — edit files directly in the repository
+Pergumulan yang sedang Anda hadapi hari ini bukanlah akhir dari cerita yang Tuhan tuliskan atas hidup Anda. Ada musim yang sulit, tetapi ada juga pemulihan yang Tuhan siapkan pada waktu-Nya. Tetaplah berpegang kepada-Nya, karena Yesus adalah sumber pengharapan yang tidak mengecewakan.
 
-Run `npm run build` locally to preview changes before deploying.
+**Doa Singkat**
+
+"Tuhan Yesus, Engkau mengetahui setiap pergumulan yang sedang aku hadapi. Ketika hatiku lelah dan pikiranku penuh kekhawatiran, tolong aku untuk tetap percaya kepada-Mu. Berikan kekuatan untuk menjalani hari ini, hikmat untuk mengambil keputusan yang benar, dan damai sejahtera yang melampaui segala akal. Aku menyerahkan hidup dan masa depanku ke dalam tangan-Mu. Amin."
+
+**Pesan untuk hari ini:**
+Jangan ukur penyertaan Tuhan dari keadaan yang sedang terjadi. Ukurlah dari salib Kristus, karena di sana Yesus telah menunjukkan betapa besar kasih-Nya kepada Anda.
