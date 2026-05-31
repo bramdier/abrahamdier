@@ -2,6 +2,7 @@ backend:
   name: github
   repo: bramdier/abrahamdier
   branch: main
+  base_url: https://abrahamdier-oauth.vercel.app/
 
 # Use Netlify's free OAuth bridge for GitHub login (works on Vercel).
 # Create a GitHub OAuth App: https://github.com/settings/developers
