@@ -2,9 +2,10 @@ window.initSiteTabs = function () {
   var tabs = document.querySelectorAll(".tab-btn");
   var panels = document.querySelectorAll(".tab-panel");
   var validTabs = { work: true, product: true, built: true };
+  var onHome = panels.length > 0;
 
   function showTab(id, updateHash) {
-    if (!validTabs[id]) id = "work";
+    if (!validTabs[id]) return;
     tabs.forEach(function (btn) {
       var active = btn.dataset.tab === id;
       btn.setAttribute("aria-selected", active ? "true" : "false");
@@ -17,12 +18,23 @@ window.initSiteTabs = function () {
     }
   }
 
-  tabs.forEach(function (btn) {
-    btn.addEventListener("click", function () {
-      showTab(btn.dataset.tab, true);
+  if (onHome) {
+    tabs.forEach(function (btn) {
+      btn.addEventListener("click", function (e) {
+        var tab = btn.dataset.tab;
+        if (validTabs[tab]) {
+          e.preventDefault();
+          showTab(tab, true);
+        }
+      });
     });
-  });
 
-  var hash = location.hash.replace("#", "");
-  showTab(validTabs[hash] ? hash : "work", false);
+    window.addEventListener("hashchange", function () {
+      var hash = location.hash.replace("#", "");
+      if (validTabs[hash]) showTab(hash, false);
+    });
+
+    var hash = location.hash.replace("#", "");
+    showTab(validTabs[hash] ? hash : "work", false);
+  }
 };

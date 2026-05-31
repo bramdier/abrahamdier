@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>{{TITLE}}</title>
+  <meta name="description" content="{{DESCRIPTION}}" />
+  <link href="{{ROOT}}css/styles.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500&amp;family=Space+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet" />
+</head>
+<body class="min-h-screen flex flex-col bg-surface text-on-surface selection:bg-secondary-container selection:text-on-secondary-container {{BODY_CLASS}}">
+  <div id="site-header"></div>
+  <main class="flex-1 w-full pt-36 pb-20 max-w-3xl mx-auto px-8">
+    {{MAIN}}
+  </main>
+  <div id="site-footer" class="w-full mt-auto shrink-0"></div>
+  <script src="{{ROOT}}layout-include.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+backend:
+  name: github
+  repo: bramdier/abrahamdier
+  branch: main
+
+# Use Netlify's free OAuth bridge for GitHub login (works on Vercel).
+# Create a GitHub OAuth App: https://github.com/settings/developers
+# Then follow: https://decapcms.org/docs/authentication-backends/#github-backend
+# Local editing without OAuth: npx decap-server
+
+media_folder: uploads
+public_folder: /uploads
+
+collections:
+  - name: blog
+    label: Blog Posts
+    folder: content/blog
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: Slug
+        name: slug
+        widget: string
+        hint: URL-friendly name (e.g. my-first-post). Leave blank to derive from filename.
+        required: false
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - label: Description
+        name: description
+        widget: text
+        required: false
+      - label: Draft
+        name: draft
+        widget: boolean
+        default: false
+      - label: Body
+        name: body
+        widget: markdown
