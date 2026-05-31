@@ -2,12 +2,8 @@ backend:
   name: github
   repo: bramdier/abrahamdier
   branch: main
-  base_url: https://abrahamdier-oauth.vercel.app/
-
-# Use Netlify's free OAuth bridge for GitHub login (works on Vercel).
-# Create a GitHub OAuth App: https://github.com/settings/developers
-# Then follow: https://decapcms.org/docs/authentication-backends/#github-backend
-# Local editing without OAuth: npx decap-server
+  base_url: https://abrahamdier-oauth.vercel.app
+  auth_endpoint: auth
 
 media_folder: uploads
 public_folder: /uploads
@@ -20,6 +16,7 @@ collections:
     slug: "{{slug}}"
     extension: md
     format: frontmatter
+    preview_path: "blog/{{slug}}"
     fields:
       - label: Title
         name: title
@@ -27,8 +24,9 @@ collections:
       - label: Slug
         name: slug
         widget: string
-        hint: URL-friendly name (e.g. my-first-post). Leave blank to derive from filename.
-        required: false
+        hint: URL path, e.g. my-post-title. Use lowercase, numbers, and hyphens only.
+        pattern: ['^[a-z0-9]+(?:-[a-z0-9]+)*$', 'Use lowercase letters, numbers, and hyphens only.']
+        required: true
       - label: Publish Date
         name: date
         widget: datetime

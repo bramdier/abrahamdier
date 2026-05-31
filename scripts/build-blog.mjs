@@ -39,7 +39,7 @@ function loadPosts() {
     .map((file) => {
       const raw = readFileSync(join(CONTENT_DIR, file), "utf8");
       const { data, content } = matter(raw);
-      const slug = data.slug || slugFromFile(file);
+      const slug = slugFromFile(file);
       return {
         slug,
         title: data.title || slug,

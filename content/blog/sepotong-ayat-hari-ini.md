@@ -1,12 +1,9 @@
 ---
 title: Sepotong ayat hari ini
-slug: sepotong-ayat-hari-ini
 date: 2026-05-31T15:12:00.000+07:00
-description: '"Marilah kepada-Ku, semua yang letih lesu dan berbeban berat, Aku
-  akan memberi kelegaan kepadamu." — Injil Matius 11:28'
+description: '"Marilah kepada-Ku, semua yang letih lesu dan berbeban berat, Aku akan memberi kelegaan kepadamu." — Injil Matius 11:28'
 draft: false
 ---
-
 
 **Renungan**
 
