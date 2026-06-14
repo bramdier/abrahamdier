@@ -1,5 +1,4 @@
 import { cpSync, existsSync, mkdirSync, rmSync } from "fs";
-import { buildBlog } from "./build-blog.mjs";
 
 const OUT = "public";
 
@@ -11,7 +10,7 @@ const files = [
   "tabs.js",
 ];
 
-const dirs = ["css", "admin", "uploads"];
+const dirs = ["css"];
 
 const optionalFiles = ["hero.JPG", "hero_2.jpg"];
 
@@ -33,7 +32,5 @@ for (const file of optionalFiles) {
     cpSync(file, `${OUT}/${file}`);
   }
 }
-
-buildBlog();
 
 console.log("Built static site → public/");

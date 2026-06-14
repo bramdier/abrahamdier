@@ -3,8 +3,6 @@
 @source "../index.html";
 @source "../header.html";
 @source "../footer.html";
-@source "../templates/**/*.html";
-@source "../admin/**/*.html";
 
 @layer base {
   body {
@@ -30,104 +28,5 @@
   .tab-btn[aria-selected="true"] {
     color: #9a442d;
     border-bottom-color: #9a442d;
-  }
-
-  .page-blog .nav-blog {
-    color: #9a442d;
-    border-bottom-color: #9a442d;
-  }
-
-  .prose-blog {
-    color: #44474c;
-    line-height: 1.7;
-  }
-
-  .prose-blog > * + * {
-    margin-top: 1.25rem;
-  }
-
-  .prose-blog h2 {
-    font-family: "Manrope", sans-serif;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #041627;
-    margin-top: 2.5rem;
-  }
-
-  .prose-blog h3 {
-    font-family: "Manrope", sans-serif;
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: #041627;
-    margin-top: 2rem;
-  }
-
-  .prose-blog a {
-    color: #9a442d;
-    text-decoration: underline;
-    text-underline-offset: 2px;
-  }
-
-  .prose-blog a:hover {
-    color: #041627;
-  }
-
-  .prose-blog ul,
-  .prose-blog ol {
-    padding-left: 1.25rem;
-  }
-
-  .prose-blog ul {
-    list-style-type: disc;
-  }
-
-  .prose-blog ol {
-    list-style-type: decimal;
-  }
-
-  .prose-blog li + li {
-    margin-top: 0.5rem;
-  }
-
-  .prose-blog blockquote {
-    border-left: 3px solid #9a442d;
-    padding-left: 1rem;
-    color: #1a1c1c;
-    font-style: italic;
-  }
-
-  .prose-blog code,
-  .prose-code {
-    font-family: "Space Grotesk", monospace;
-    font-size: 0.875em;
-    background: #f4f3f2;
-    padding: 0.125rem 0.375rem;
-    border-radius: 0.125rem;
-  }
-
-  .prose-blog pre {
-    background: #041627;
-    color: #faf9f8;
-    padding: 1rem 1.25rem;
-    overflow-x: auto;
-    border-radius: 0.25rem;
-  }
-
-  .prose-blog pre code {
-    background: transparent;
-    padding: 0;
-    color: inherit;
-  }
-
-  .prose-blog img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 0.25rem;
-  }
-
-  .prose-blog hr {
-    border: none;
-    border-top: 1px solid rgba(196, 198, 205, 0.3);
-    margin: 2rem 0;
   }
 }

@@ -8,13 +8,10 @@
     "watch:css": "tailwindcss -i ./src/input.css -o ./css/styles.css --watch",
     "build": "npm run build:css && npm run build:public",
     "dev": "npm run watch:css",
-    "preview": "npm run build && npx --yes serve public -l 3000",
-    "cms": "npx decap-server"
+    "preview": "npm run build && npx --yes serve public -l 3000"
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.1.8",
-    "gray-matter": "^4.0.3",
-    "marked": "^18.0.4",
     "tailwindcss": "^4.1.8"
   }
 }
