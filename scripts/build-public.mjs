@@ -12,7 +12,7 @@ const files = [
 
 const dirs = ["css"];
 
-const optionalFiles = ["hero.JPG", "hero_2.jpg", "favicon.png"];
+const optionalFiles = ["hero.JPG", "hero_2.jpg", "favorite.png"];
 
 if (existsSync(OUT)) {
   rmSync(OUT, { recursive: true, force: true });
