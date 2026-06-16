@@ -8,11 +8,13 @@ const files = [
   "footer.html",
   "layout-include.js",
   "tabs.js",
+  "robots.txt",
+  "sitemap.xml",
 ];
 
 const dirs = ["css"];
 
-const optionalFiles = ["hero.JPG", "hero_2.jpg", "favorite.png"];
+const optionalFiles = ["hero.JPG", "hero_2.jpg", "logo_a.png"];
 
 if (existsSync(OUT)) {
   rmSync(OUT, { recursive: true, force: true });
