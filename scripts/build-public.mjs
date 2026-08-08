@@ -18,8 +18,6 @@ const optionalFiles = [
   "hero.JPG",
   "hero_2.jpg",
   "logo_a.png",
-  "WLN-HT.jpg",
-  "dji_osmo_mobile.jpg",
 ];
 
 if (existsSync(OUT)) {

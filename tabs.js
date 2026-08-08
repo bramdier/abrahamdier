@@ -1,7 +1,7 @@
 window.initSiteTabs = function () {
   var tabs = document.querySelectorAll(".tab-btn");
   var panels = document.querySelectorAll(".tab-panel");
-  var validTabs = { work: true, product: true, built: true };
+  var validTabs = { home: true, work: true, built: true };
   var onHome = panels.length > 0;
 
   function showTab(id, updateHash) {
@@ -35,6 +35,6 @@ window.initSiteTabs = function () {
     });
 
     var hash = location.hash.replace("#", "");
-    showTab(validTabs[hash] ? hash : "work", false);
+    showTab(validTabs[hash] ? hash : "home", false);
   }
 };

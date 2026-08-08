@@ -29,4 +29,38 @@
     color: #9a442d;
     border-bottom-color: #9a442d;
   }
+
+  .whatsapp-float {
+    position: fixed;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 9999px;
+    background-color: #25d366;
+    color: #fff;
+    box-shadow:
+      0 24px 48px -12px rgba(26, 28, 28, 0.08),
+      0 4px 12px rgba(37, 211, 102, 0.25);
+    transition: transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .whatsapp-float svg {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+
+  .whatsapp-float:hover {
+    transform: scale(1.05);
+    background-color: #20bd5a;
+  }
+
+  .whatsapp-float:focus-visible {
+    outline: 2px solid #25d366;
+    outline-offset: 3px;
+  }
 }
