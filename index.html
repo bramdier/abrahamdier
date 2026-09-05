@@ -6,79 +6,76 @@
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <meta name="description"
-    content="Portfolio of Abraham Dier Spiez — software engineer with experience in ERP, logistics, insurance systems, and personal projects." />
+    content="Portfolio of Abraham Dier Spiez — system engineer and IT solutions architect with experience in ERP, logistics, insurance systems, and personal projects." />
   <link rel="canonical" href="https://www.abrahamdier.my.id/" />
   <title>Abraham Dier Spiez</title>
   <link rel="icon" href="/logo_a.png" type="image/png" />
   <link rel="apple-touch-icon" href="/logo_a.png" />
-  <link href="css/styles.css" rel="stylesheet" />
   <link
-    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500&amp;family=Space+Grotesk:wght@400;500;700&amp;display=swap"
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500&amp;family=Space+Grotesk:wght@400;500;700&amp;family=Poppins:wght@500;600;700&amp;display=swap"
     rel="stylesheet" />
 </head>
 
-<body class="min-h-screen flex flex-col bg-surface text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
+<body class="bg-surface text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
+  <noscript>
+    <p style="padding: 2rem; text-align: center;">This portfolio uses horizontal scroll and WebGL. Please enable JavaScript to view it.</p>
+  </noscript>
+
+  <canvas id="webgl" aria-hidden="true"></canvas>
   <div id="site-header"></div>
 
-  <main class="flex-1 w-full pt-36 pb-20 max-w-3xl mx-auto px-8">
+  <div class="scroll-wrapper">
+    <div class="scroll-track">
 
-    <!-- Home -->
-    <section class="tab-panel" id="panel-home" role="tabpanel" aria-labelledby="tab-home">
-      <h1 class="text-4xl font-black text-primary tracking-tight mb-4">System Engineer &amp; IT Solutions Architect</h1>
-      <h2 class="text-xl font-semibold text-primary mb-8">Designing Systems That Connect Technology, Operations, and Business.</h2>
-
-      <div class="space-y-5 mb-10">
-        <p class="text-on-surface leading-7">I design and engineer practical IT solutions that help businesses streamline operations, integrate disconnected systems, and build reliable digital infrastructure.</p>
-        <p class="text-on-surface leading-7">With experience across system architecture, enterprise applications, backend engineering, databases, infrastructure, automation, and business process digitization, I work at the intersection of technology and business operations.</p>
-        <p class="text-on-surface leading-7">My approach is simple: <strong class="text-primary font-bold">understand the business problem first, architect the right solution, and build technology that delivers measurable operational value.</strong></p>
-        <p class="text-on-surface-variant leading-7"><span class="label-text text-sm tracking-wide text-primary uppercase">Available for</span><br>System Architecture · IT Consulting · Enterprise Solutions · System Integration · Backend Engineering · Infrastructure &amp; Automation</p>
-      </div>
-
-      <div class="mb-16 pb-4">
-        <a class="inline-flex items-center gap-2 px-5 py-2.5 bg-secondary-container text-primary font-bold text-sm rounded hover:bg-secondary hover:text-on-primary transition-colors"
-          href="https://cv-bram.vercel.app/" target="_blank" rel="noopener noreferrer">
-          Check my resume
-          <span aria-hidden="true">→</span>
-        </a>
-      </div>
-
-      <article class="mb-16">
-        <h2 class="text-2xl font-bold text-primary mb-10">What I Do</h2>
-        <div class="space-y-10">
-          <div>
-            <h3 class="text-lg font-bold text-primary mb-3">System Architecture</h3>
-            <p class="text-on-surface leading-7 mb-3">Design scalable and maintainable system architectures based on business requirements, technical constraints, and long-term growth.</p>
-            <p class="text-on-surface-variant leading-7">From application architecture to database design and infrastructure planning, I focus on creating systems that are reliable today and ready for tomorrow.</p>
-          </div>
-          <div>
-            <h3 class="text-lg font-bold text-primary mb-3">IT Solutions &amp; Digital Transformation</h3>
-            <p class="text-on-surface leading-7 mb-3">Transform manual and fragmented business processes into structured digital workflows.</p>
-            <p class="text-on-surface-variant leading-7">I help organizations identify operational bottlenecks, design technology-driven solutions, and connect people, processes, and systems into a unified ecosystem.</p>
-          </div>
-          <div>
-            <h3 class="text-lg font-bold text-primary mb-3">System Integration</h3>
-            <p class="text-on-surface leading-7 mb-3">Connect applications, databases, APIs, third-party platforms, and operational systems so they work together as one.</p>
-            <p class="text-on-surface-variant leading-7">Whether integrating ERP, WMS, TMS, fleet tracking, attendance systems, or custom applications, I focus on reliable data flow and maintainable integrations.</p>
-          </div>
-          <div>
-            <h3 class="text-lg font-bold text-primary mb-3">Backend &amp; Enterprise Applications</h3>
-            <p class="text-on-surface leading-7 mb-3">Build robust backend services and business applications designed around real operational requirements.</p>
-            <p class="text-on-surface-variant leading-7">My experience includes PHP, Laravel, Node.js, NestJS, Go, REST APIs, SQL Server, PostgreSQL, MySQL, and modern web technologies.</p>
-          </div>
-          <div>
-            <h3 class="text-lg font-bold text-primary mb-3">Infrastructure &amp; DevOps</h3>
-            <p class="text-on-surface leading-7 mb-3">Design and manage the technical foundation behind applications and business systems.</p>
-            <p class="text-on-surface-variant leading-7">Experience includes Linux, Docker, Docker Compose, Nginx, Apache, virtualization, server environments, deployment, monitoring, and system troubleshooting.</p>
-          </div>
+      <!-- 01 Hero -->
+      <section class="scroll-section is-active" id="hero" data-slide="hero" role="region" aria-label="Introduction">
+        <div class="slide-content max-w-3xl w-full">
+          <p class="label-text text-xs uppercase tracking-widest text-secondary mb-4 slide-meta hidden">01 — Intro</p>
+          <h1 class="text-4xl md:text-5xl font-black text-primary tracking-tight mb-4">System Engineer &amp; IT Solutions Architect</h1>
+          <h2 class="text-xl font-semibold text-primary mb-8">Designing Systems That Connect Technology, Operations, and Business.</h2>
+          <p class="text-on-surface leading-7 mb-6 max-w-2xl">I design and engineer practical IT solutions that help businesses streamline operations, integrate disconnected systems, and build reliable digital infrastructure.</p>
+          <p class="text-on-surface-variant leading-7 mb-8 max-w-2xl"><span class="label-text text-sm tracking-wide text-primary uppercase">Available for</span><br>System Architecture · IT Consulting · Enterprise Solutions · System Integration · Backend Engineering · Infrastructure &amp; Automation</p>
+          <a class="inline-flex items-center gap-2 px-5 py-2.5 bg-secondary-container text-primary font-bold text-sm rounded hover:bg-secondary hover:text-on-primary transition-colors"
+            href="https://cv-bram.vercel.app/" target="_blank" rel="noopener noreferrer">
+            Check my resume
+            <span aria-hidden="true">→</span>
+          </a>
         </div>
-      </article>
+      </section>
 
-      <article class="mb-16 -mx-8 px-8 py-10 bg-surface-container-low">
-        <h2 class="text-2xl font-bold text-primary mb-8">Turning Business Problems Into Technical Solutions</h2>
-        <div class="space-y-6">
-          <p class="text-on-surface leading-7">Technology is only valuable when it solves a real problem.</p>
-          <p class="text-on-surface leading-7">My work typically starts with understanding:</p>
+      <!-- 02 About -->
+      <section class="scroll-section" id="about" data-slide="about" role="region" aria-label="About">
+        <div class="slide-content max-w-3xl w-full">
+          <p class="label-text text-xs uppercase tracking-widest text-secondary mb-4 slide-meta hidden">02 — About</p>
+          <h2 class="text-3xl font-black text-primary tracking-tight mb-8">What I Do</h2>
+          <div class="grid gap-6 md:grid-cols-2">
+            <div class="p-5 bg-surface-container-low rounded">
+              <h3 class="text-lg font-bold text-primary mb-2">System Architecture</h3>
+              <p class="text-on-surface-variant text-sm leading-relaxed">Scalable architectures from application design to database and infrastructure planning.</p>
+            </div>
+            <div class="p-5 bg-surface-container-low rounded">
+              <h3 class="text-lg font-bold text-primary mb-2">Digital Transformation</h3>
+              <p class="text-on-surface-variant text-sm leading-relaxed">Turn manual processes into structured digital workflows aligned with business operations.</p>
+            </div>
+            <div class="p-5 bg-surface-container-low rounded">
+              <h3 class="text-lg font-bold text-primary mb-2">System Integration</h3>
+              <p class="text-on-surface-variant text-sm leading-relaxed">Connect ERP, WMS, TMS, APIs, and custom apps into unified, reliable data flows.</p>
+            </div>
+            <div class="p-5 bg-surface-container-low rounded">
+              <h3 class="text-lg font-bold text-primary mb-2">Backend &amp; Infrastructure</h3>
+              <p class="text-on-surface-variant text-sm leading-relaxed">PHP, Laravel, Node.js, NestJS, Go, SQL databases, Docker, Linux, and deployment.</p>
+            </div>
+          </div>
+          <p class="text-primary font-bold leading-7 mt-8">Understand the business problem first, architect the right solution, and build technology that delivers measurable value.</p>
+        </div>
+      </section>
 
+      <!-- 03 Process -->
+      <section class="scroll-section" id="process" data-slide="process" role="region" aria-label="Process">
+        <div class="slide-content max-w-3xl w-full">
+          <p class="label-text text-xs uppercase tracking-widest text-secondary mb-4 slide-meta hidden">03 — Process</p>
+          <h2 class="text-3xl font-black text-primary tracking-tight mb-6">Turning Business Problems Into Technical Solutions</h2>
+          <p class="text-on-surface leading-7 mb-6">Technology is only valuable when it solves a real problem. My work starts with understanding the business, then engineering the architecture.</p>
           <ol class="process-flow" aria-label="Solution delivery process">
             <li class="process-flow__step">
               <span class="process-flow__num" aria-hidden="true">1</span>
@@ -105,239 +102,66 @@
               <span class="process-flow__label label-text">Optimization</span>
             </li>
           </ol>
-
-          <p class="text-on-surface leading-7">I don't approach projects by simply asking, <em>"What technology should we use?"</em></p>
-          <p class="text-on-surface-variant leading-7">I ask:</p>
-          <p class="text-primary font-bold leading-7">"What should the system achieve, how should the business operate, and what architecture will make that possible?"</p>
-          <p class="text-on-surface leading-7">This allows me to build solutions that are not only technically sound, but also aligned with the way organizations actually work.</p>
         </div>
-      </article>
+      </section>
 
-      <article class="mb-16 pt-4">
-        <h2 class="text-2xl font-bold text-primary mb-10">Selected Capabilities</h2>
-        <div class="space-y-10">
-          <div>
-            <h3 class="text-lg font-bold text-primary mb-3">Architecture</h3>
-            <ul class="list-disc pl-5 space-y-2 text-on-surface leading-7">
-              <li>Enterprise Application Architecture</li>
-              <li>System Design &amp; Technical Planning</li>
-              <li>Database Architecture</li>
-              <li>API Architecture</li>
-              <li>System Integration</li>
-              <li>Scalability &amp; Maintainability</li>
-            </ul>
+      <!-- 04 Work -->
+      <section class="scroll-section scroll-section--index" id="work" data-slide="work" role="region" aria-label="Work">
+        <div class="slide-content project-index w-full max-w-6xl mx-auto">
+          <div class="project-index__aside">
+            <p class="project-index__label label-text">Selected Projects</p>
+            <p class="project-index__range label-text" data-work-range>—</p>
           </div>
-          <div>
-            <h3 class="text-lg font-bold text-primary mb-3">Enterprise Systems</h3>
-            <ul class="list-disc pl-5 space-y-2 text-on-surface leading-7">
-              <li>ERP</li>
-              <li>WMS</li>
-              <li>TMS / Fleet Management</li>
-              <li>Billing &amp; Operational Systems</li>
-              <li>Workflow Automation</li>
-              <li>Business Process Digitization</li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="text-lg font-bold text-primary mb-3">Backend &amp; Development</h3>
-            <ul class="list-disc pl-5 space-y-2 text-on-surface leading-7">
-              <li>PHP / Laravel</li>
-              <li>Node.js / NestJS</li>
-              <li>Go</li>
-              <li>REST API</li>
-              <li>SQL Server</li>
-              <li>PostgreSQL</li>
-              <li>MySQL</li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="text-lg font-bold text-primary mb-3">Infrastructure</h3>
-            <ul class="list-disc pl-5 space-y-2 text-on-surface leading-7">
-              <li>Linux</li>
-              <li>Docker &amp; Docker Compose</li>
-              <li>Nginx / Apache</li>
-              <li>Virtualization</li>
-              <li>Server Deployment</li>
-              <li>Monitoring &amp; Troubleshooting</li>
-            </ul>
-          </div>
+          <ul class="project-list" role="list" data-project-list="work"></ul>
         </div>
-      </article>
+      </section>
 
-      <article class="mb-16">
-        <h2 class="text-2xl font-bold text-primary mb-10">Why Work With Me?</h2>
-        <div class="space-y-10">
-          <div>
-            <h3 class="text-lg font-bold text-primary mb-3">Business-First Engineering</h3>
-            <p class="text-on-surface leading-7">I translate operational requirements into practical technical solutions instead of building technology for technology's sake.</p>
+      <!-- 05 Built -->
+      <section class="scroll-section scroll-section--index" id="built" data-slide="built" role="region" aria-label="Built">
+        <div class="slide-content project-index w-full max-w-6xl mx-auto">
+          <div class="project-index__aside">
+            <p class="project-index__label label-text">Built Projects</p>
+            <p class="project-index__range label-text" data-built-range>—</p>
           </div>
-          <div>
-            <h3 class="text-lg font-bold text-primary mb-3">End-to-End Perspective</h3>
-            <p class="text-on-surface leading-7">I understand the complete lifecycle—from business processes and application architecture to databases, APIs, servers, deployment, and integration.</p>
-          </div>
-          <div>
-            <h3 class="text-lg font-bold text-primary mb-3">Enterprise Mindset</h3>
-            <p class="text-on-surface leading-7">Solutions are designed with reliability, security, maintainability, scalability, and operational continuity in mind.</p>
-          </div>
-          <div>
-            <h3 class="text-lg font-bold text-primary mb-3">Practical Execution</h3>
-            <p class="text-on-surface leading-7">Architecture is only valuable when it can be implemented. I combine architectural thinking with hands-on engineering experience.</p>
-          </div>
+          <ul class="project-list" role="list" data-project-list="built"></ul>
         </div>
-      </article>
+      </section>
 
-      <article class="mb-0">
-        <h2 class="text-2xl font-bold text-primary mb-8">Let's Build the Right System</h2>
-        <div class="space-y-5">
-          <p class="text-on-surface leading-7">Whether you are modernizing an existing application, integrating multiple business systems, automating manual processes, or building a new enterprise solution, I can help turn your requirements into a clear and implementable technical solution.</p>
-          <p class="text-primary font-bold leading-7">Have a system that needs to be designed, integrated, or improved?</p>
-          <p class="text-on-surface-variant leading-7">Let's discuss the problem—and engineer the solution.</p>
-        </div>
-      </article>
-    </section>
-
-    <!-- Works -->
-    <section class="tab-panel" id="panel-work" role="tabpanel" aria-labelledby="tab-work" hidden>
-      <h1 class="text-4xl font-black text-primary tracking-tighter mb-12">Works</h1>
-
-      <article class="mb-14 pb-14 border-b border-outline-variant/30">
-        <h2 class="text-2xl font-bold text-primary mb-8">Trans Continent</h2>
-
-        <div class="space-y-8">
-          <div>
-            <h3 class="text-lg font-bold text-primary mb-3">Enterprise Resource Planning (ERP) System</h3>
-            <p class="text-on-surface-variant leading-relaxed">Designed and developed an integrated ERP web application that streamlines end-to-end logistics operations, including shipment management, container movement tracking, operational reporting, customer services, and administrative processes. The platform serves as the core operational backbone for daily logistics activities, improving process visibility, operational efficiency, and data accuracy across departments.</p>
+      <!-- 06 Contact -->
+      <section class="scroll-section" id="contact" data-slide="contact" role="region" aria-label="Contact">
+        <div class="slide-content max-w-3xl w-full">
+          <p class="label-text text-xs uppercase tracking-widest text-secondary mb-4 slide-meta hidden">06 — Contact</p>
+          <h2 class="text-3xl md:text-4xl font-black text-primary tracking-tight mb-6">Let's Build the Right System</h2>
+          <p class="text-on-surface leading-7 mb-4 max-w-2xl">Whether you are modernizing an application, integrating business systems, or building a new enterprise solution—I can help turn requirements into a clear, implementable technical solution.</p>
+          <p class="text-primary font-bold leading-7 mb-8">Have a system that needs to be designed, integrated, or improved?</p>
+          <div class="flex flex-wrap gap-6 mb-10">
+            <a class="label-text text-xs tracking-widest uppercase text-on-surface-variant hover:text-secondary transition-colors"
+              href="https://www.linkedin.com/in/abraham-dier-spiez-22148617a/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a class="label-text text-xs tracking-widest uppercase text-on-surface-variant hover:text-secondary transition-colors"
+              href="https://github.com/bramdier" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a class="label-text text-xs tracking-widest uppercase text-on-surface-variant hover:text-secondary transition-colors"
+              href="https://cv-bram.vercel.app/" target="_blank" rel="noopener noreferrer">Resume</a>
           </div>
-          <div>
-            <h3 class="text-lg font-bold text-primary mb-3">Container Tracking Management System (CTMS)</h3>
-            <p class="text-on-surface-variant leading-relaxed">Developed a container tracking and monitoring platform that provides real-time visibility into container movements throughout the logistics lifecycle. The system enables operational teams and customers to track container status, locations, and movement history, improving transparency and reducing manual tracking efforts.</p>
-          </div>
-          <div>
-            <h3 class="text-lg font-bold text-primary mb-3">Warehouse Management System (WMS)</h3>
-            <p class="text-on-surface-variant leading-relaxed">Built a warehouse management solution to optimize inventory control, inbound and outbound operations, stock monitoring, and warehouse utilization. The system improves inventory accuracy, enhances operational productivity, and supports efficient warehouse execution for logistics operations.</p>
-          </div>
-          <div>
-            <h3 class="text-lg font-bold text-primary mb-3">AI-Powered Customer Service Automation</h3>
-            <p class="text-on-surface-variant leading-relaxed">Developed an intelligent customer service automation platform leveraging Agentic AI capabilities to assist logistics operations and customer support teams. The solution automates customer inquiries, operational requests, and business knowledge retrieval, improving response times, service consistency, and operational efficiency.</p>
-          </div>
+          <p class="label-text text-xs tracking-widest uppercase text-on-surface-variant">© 2026 Abraham Dier Spiez</p>
         </div>
-      </article>
+      </section>
 
-      <article class="mb-14 pb-14 border-b border-outline-variant/30">
-        <h2 class="text-2xl font-bold text-primary mb-8">Semesta Energy Services</h2>
+    </div>
+  </div>
 
-        <div>
-          <h3 class="text-lg font-bold text-primary mb-3">Dynamic Scheduling Automation System (DSAS)</h3>
-          <p class="text-on-surface-variant leading-relaxed mb-4">Contributed to the development of the Dynamic Scheduling Automation System (DSAS), an advanced planning and optimization platform designed for petroleum distribution operations. The system utilizes Artificial Intelligence (AI) and Machine Learning (ML) algorithms to optimize scheduling and transportation planning for crude oil, LPG, fuel products, and intermediate materials.</p>
-          <p class="text-on-surface-variant leading-relaxed">DSAS generates predictive distribution scenarios, recommends optimal transportation routes, minimizes logistics costs, maintains inventory availability, and ensures production and demand fulfillment. The platform significantly improves operational planning accuracy and decision-making efficiency within complex energy supply chain environments.</p>
-        </div>
-      </article>
+  <div id="site-footer" class="hidden" aria-hidden="true"></div>
 
-      <article class="mb-14 pb-14 border-b border-outline-variant/30">
-        <h2 class="text-2xl font-bold text-primary mb-8">KB Insurance</h2>
-
-        <div class="space-y-8">
-          <div>
-            <h3 class="text-lg font-bold text-primary mb-3">General Management System (GMS)</h3>
-            <p class="text-on-surface-variant leading-relaxed">Developed and maintained a comprehensive operational management platform that supports procurement processes, warehouse management, asset management, and general affairs operations. The system centralizes operational workflows, enhances process governance, and improves organizational efficiency across multiple business functions.</p>
-          </div>
-          <div>
-            <h3 class="text-lg font-bold text-primary mb-3">Policy Management System (PMS)</h3>
-            <p class="text-on-surface-variant leading-relaxed">Built and enhanced an insurance policy management platform responsible for policy lifecycle management, policy issuance, endorsement processing, customer information management, and operational reporting. The system supports core insurance business processes while ensuring data integrity and regulatory compliance.</p>
-          </div>
-        </div>
-      </article>
-
-      <article class="mb-14 pb-14 border-b border-outline-variant/30">
-        <h2 class="text-2xl font-bold text-primary mb-8">BPK PENABUR</h2>
-
-        <div>
-          <h3 class="text-lg font-bold text-primary mb-3">International Education and Assessment</h3>
-          <p class="text-on-surface-variant leading-relaxed">Delivered IGCSE curriculum instruction to international students while facilitating academic assessments and examinations. Responsible for creating engaging learning environments, evaluating student performance, and supporting students in achieving international academic standards.</p>
-        </div>
-      </article>
-
-      <article class="mb-14 pb-14 border-b border-outline-variant/30 last:border-0 last:pb-0 last:mb-0">
-        <h2 class="text-2xl font-bold text-primary mb-8">LEPKOM Gunadarma</h2>
-
-        <div>
-          <h3 class="text-lg font-bold text-primary mb-3">Learning Management System (LMS) Implementation</h3>
-          <p class="text-on-surface-variant leading-relaxed">Participated in the implementation and support of Learning Management System (LMS) solutions for higher education environments. Assisted in deploying digital learning platforms, supporting academic operations, facilitating online learning activities, and enhancing educational technology adoption across campus stakeholders.</p>
-        </div>
-      </article>
-    </section>
-
-    <!-- Built -->
-    <section class="tab-panel" id="panel-built" role="tabpanel" aria-labelledby="tab-built" hidden>
-      <h1 class="text-4xl font-black text-primary tracking-tighter mb-12">Built</h1>
-
-      <ul class="space-y-4">
-        <li>
-          <a class="group block py-4 px-5 bg-surface-container-low hover:bg-surface-container-lowest transition-colors"
-            href="https://www.dierhaul.my.id/" target="_blank" rel="noopener noreferrer">
-            <div class="flex items-center justify-between gap-4">
-              <div class="min-w-0">
-                <span class="font-bold text-primary block">Dierhaul</span>
-                <p class="text-sm text-on-surface-variant mt-1 leading-relaxed">One stop solution system for logistic operational</p>
-              </div>
-              <span class="label-text text-xs uppercase tracking-widest text-secondary shrink-0 group-hover:translate-x-1 transition-transform">→</span>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a class="group block py-4 px-5 bg-surface-container-low hover:bg-surface-container-lowest transition-colors"
-            href="https://klinik.abrahamdier.my.id/" target="_blank" rel="noopener noreferrer">
-            <div class="flex items-center justify-between gap-4">
-              <div class="min-w-0">
-                <span class="font-bold text-primary block">Apotek Ezra</span>
-                <p class="text-sm text-on-surface-variant mt-1 leading-relaxed">Clinic management system</p>
-              </div>
-              <span class="label-text text-xs uppercase tracking-widest text-secondary shrink-0 group-hover:translate-x-1 transition-transform">→</span>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a class="group block py-4 px-5 bg-surface-container-low hover:bg-surface-container-lowest transition-colors"
-            href="https://maleoaviation.com/" target="_blank" rel="noopener noreferrer">
-            <div class="flex items-center justify-between gap-4">
-              <div class="min-w-0">
-                <span class="font-bold text-primary block">Maleo Aviation</span>
-                <p class="text-sm text-on-surface-variant mt-1 leading-relaxed">Ground Handling Company Profile Website</p>
-              </div>
-              <span class="label-text text-xs uppercase tracking-widest text-secondary shrink-0 group-hover:translate-x-1 transition-transform">→</span>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a class="group block py-4 px-5 bg-surface-container-low hover:bg-surface-container-lowest transition-colors"
-            href="https://ebusiness.kbinsure.co.id/vendor/user/login" target="_blank" rel="noopener noreferrer">
-            <div class="flex items-center justify-between gap-4">
-              <div class="min-w-0">
-                <span class="font-bold text-primary block">eProcurement</span>
-                <p class="text-sm text-on-surface-variant mt-1 leading-relaxed">Procurement Management System</p>
-              </div>
-              <span class="label-text text-xs uppercase tracking-widest text-secondary shrink-0 group-hover:translate-x-1 transition-transform">→</span>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a class="group block py-4 px-5 bg-surface-container-low hover:bg-surface-container-lowest transition-colors"
-            href="https://loja.my.id" target="_blank" rel="noopener noreferrer">
-            <div class="flex items-center justify-between gap-4">
-              <div class="min-w-0">
-                <span class="font-bold text-primary block">Loja App</span>
-                <p class="text-sm text-on-surface-variant mt-1 leading-relaxed">Bible Tracker App</p>
-              </div>
-              <span class="label-text text-xs uppercase tracking-widest text-secondary shrink-0 group-hover:translate-x-1 transition-transform">→</span>
-            </div>
-          </a>
-        </li>
-      </ul>
-    </section>
-
-  </main>
-
-  <div id="site-footer" class="w-full mt-auto shrink-0"></div>
+  <div id="project-modal" class="project-modal" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="project-modal-title">
+    <canvas id="webgl-modal" aria-hidden="true"></canvas>
+    <div class="project-modal__content">
+      <button type="button" class="project-modal__close label-text" aria-label="Close project">×</button>
+      <p class="project-modal__meta label-text"></p>
+      <h2 id="project-modal-title" class="project-modal__title"></h2>
+      <p class="project-modal__description"></p>
+      <p class="project-modal__tags label-text"></p>
+      <a class="project-modal__link label-text" target="_blank" rel="noopener noreferrer" hidden>Visit project →</a>
+    </div>
+  </div>
 
   <a
     class="whatsapp-float"
@@ -350,8 +174,7 @@
     </svg>
   </a>
 
-  <script src="tabs.js"></script>
-  <script src="layout-include.js"></script>
+  <script type="module" src="/src/main.js"></script>
 </body>
 
 </html>

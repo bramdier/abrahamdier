@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html", "./header.html", "./footer.html"],
+  content: ["./index.html", "./header.html", "./footer.html", "./src/**/*.{js,html}"],
   darkMode: "class",
   theme: {
     extend: {
@@ -21,6 +21,7 @@ export default {
         headline: ["Manrope", "sans-serif"],
         body: ["Inter", "sans-serif"],
         label: ["Space Grotesk", "sans-serif"],
+        brand: ["Poppins", "sans-serif"],
       },
       borderRadius: {
         DEFAULT: "0.125rem",

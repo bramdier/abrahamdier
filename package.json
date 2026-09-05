@@ -3,15 +3,18 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build:css": "tailwindcss -i ./src/input.css -o ./css/styles.css --minify",
-    "build:public": "node scripts/build-public.mjs",
-    "watch:css": "tailwindcss -i ./src/input.css -o ./css/styles.css --watch",
-    "build": "npm run build:css && npm run build:public",
-    "dev": "npm run watch:css",
-    "preview": "npm run build && npx --yes serve public -l 3000"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 3000"
+  },
+  "dependencies": {
+    "gsap": "^3.13.0",
+    "lenis": "^1.3.4",
+    "three": "^0.175.0"
   },
   "devDependencies": {
-    "@tailwindcss/cli": "^4.1.8",
-    "tailwindcss": "^4.1.8"
+    "@tailwindcss/vite": "^4.1.8",
+    "tailwindcss": "^4.1.8",
+    "vite": "^6.3.5"
   }
 }
