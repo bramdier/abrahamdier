@@ -37,6 +37,24 @@
     font-family: "Space Grotesk", sans-serif;
   }
 
+  @media (hover: hover) {
+    .text-mark {
+      background-image: linear-gradient(rgba(252, 145, 116, 0.55), rgba(252, 145, 116, 0.55));
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: 0% 100%;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+      padding-inline: 0.06em;
+      cursor: default;
+      transition: background-size 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .text-mark:hover {
+      background-size: 100% 100%;
+    }
+  }
+
   #webgl {
     position: fixed;
     inset: 0;
@@ -479,6 +497,10 @@
     .slide-content > * {
       opacity: 1;
       transform: none;
+    }
+
+    .text-mark {
+      transition: none;
     }
   }
 }
