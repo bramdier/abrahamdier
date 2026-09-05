@@ -9,6 +9,7 @@ import { initScrollNav } from "./nav/scrollNav.js";
 import { initHorizontalScroll } from "./scroll/horizontalScroll.js";
 import { createLenis } from "./scroll/lenisSetup.js";
 import { renderProjectLists } from "./ui/renderProjectLists.js";
+import { initWhatsappPicker } from "./ui/whatsappPicker.js";
 import { SceneManager } from "./webgl/SceneManager.js";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -18,6 +19,7 @@ const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matc
 async function bootstrap() {
   await loadLayout();
   renderProjectLists();
+  initWhatsappPicker();
 
   const canvas = document.getElementById("webgl");
   let sceneManager = null;
