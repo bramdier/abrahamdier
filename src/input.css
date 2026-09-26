@@ -67,28 +67,43 @@
   .scroll-wrapper {
     position: relative;
     z-index: 10;
-    height: 100vh;
-    overflow: hidden;
+  }
+
+  @media (min-width: 768px) {
+    .scroll-wrapper {
+      height: 100vh;
+      overflow: hidden;
+    }
   }
 
   .scroll-track {
     display: flex;
-    flex-wrap: nowrap;
-    height: 100vh;
-    will-change: transform;
+    flex-direction: column;
+  }
+
+  @media (min-width: 768px) {
+    .scroll-track {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      height: 100vh;
+      will-change: transform;
+    }
   }
 
   .scroll-section {
-    flex: 0 0 100vw;
-    height: 100vh;
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
     display: flex;
     align-items: center;
-    padding: 3rem 1.5rem 4rem;
+    padding: 6rem 1.5rem 4rem;
     overflow: hidden;
   }
 
   @media (min-width: 768px) {
     .scroll-section {
+      flex: 0 0 100vw;
+      height: 100vh;
       padding: 3rem 2rem 5rem;
     }
   }
@@ -112,20 +127,49 @@
     left: 1.5rem;
     bottom: 1.5rem;
     z-index: 40;
-    font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    font-size: 1rem;
-    letter-spacing: -0.01em;
-    color: #041627;
-    text-decoration: none;
     pointer-events: auto;
-    transition:
-      color 0.2s ease,
-      opacity 0.2s ease;
   }
 
-  .floating-brand:hover {
-    color: #9a442d;
+  .gorilla-btn {
+    text-decoration: none;
+    perspective: 1000px;
+  }
+
+  .gorilla-3d-wrapper {
+    width: 3.5rem;
+    height: 3.5rem;
+    background: linear-gradient(135deg, #fc9174, #9a442d);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 
+      0 10px 20px rgba(4, 22, 39, 0.2),
+      inset 0 4px 6px rgba(255, 255, 255, 0.4),
+      inset 0 -4px 6px rgba(0, 0, 0, 0.2);
+    transform: rotateX(15deg) rotateY(-15deg);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+    transform-style: preserve-3d;
+  }
+
+  .gorilla-emoji {
+    font-size: 1.75rem;
+    transform: translateZ(20px);
+    display: block;
+    filter: drop-shadow(0 4px 4px rgba(0,0,0,0.3));
+    transition: transform 0.3s ease;
+  }
+
+  .gorilla-btn:hover .gorilla-3d-wrapper {
+    transform: rotateX(0deg) rotateY(0deg) scale(1.1);
+    box-shadow: 
+      0 15px 25px rgba(4, 22, 39, 0.3),
+      inset 0 4px 6px rgba(255, 255, 255, 0.5),
+      inset 0 -4px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  .gorilla-btn:hover .gorilla-emoji {
+    transform: translateZ(30px) scale(1.1);
   }
 
   .whatsapp-float {

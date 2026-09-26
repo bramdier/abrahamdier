@@ -68,6 +68,42 @@ export class BackgroundScene {
     this.particles = new THREE.Points(geometry, particleMaterial);
     this.particleSpeeds = speeds;
     this.scene.add(this.particles);
+
+    // --- Floating 3D Triangles (Tetrahedrons) ---
+    this.triangles = [];
+    const triangleCount = isMobile ? 8 : 15;
+    const triangleGeo = new THREE.TetrahedronGeometry(0.5);
+    const triangleMat = new THREE.MeshBasicMaterial({
+      color: 0x9a442d,
+      wireframe: true,
+      transparent: true,
+      opacity: 0.15,
+    });
+
+    for (let i = 0; i < triangleCount; i++) {
+      const mesh = new THREE.Mesh(triangleGeo, triangleMat);
+      
+      // Random position
+      mesh.position.x = (Math.random() - 0.5) * 20;
+      mesh.position.y = (Math.random() - 0.5) * 12;
+      mesh.position.z = (Math.random() - 0.5) * 4;
+      
+      // Random rotation
+      mesh.rotation.x = Math.random() * Math.PI;
+      mesh.rotation.y = Math.random() * Math.PI;
+      mesh.rotation.z = Math.random() * Math.PI;
+      
+      // Random speed for animation
+      mesh.userData = {
+        speed: 0.1 + Math.random() * 0.3,
+        rotSpeedX: (Math.random() - 0.5) * 0.02,
+        rotSpeedY: (Math.random() - 0.5) * 0.02,
+        rotSpeedZ: (Math.random() - 0.5) * 0.02
+      };
+      
+      this.triangles.push(mesh);
+      this.scene.add(mesh);
+    }
   }
 
   setProgress(progress) {
@@ -81,6 +117,7 @@ export class BackgroundScene {
   update(delta) {
     if (this.reducedMotion) return;
 
+    // Animate particles
     const positions = this.particles.geometry.attributes.position.array;
     for (let i = 0; i < this.particleSpeeds.length; i++) {
       positions[i * 3] += this.particleSpeeds[i] * delta * 0.3;
@@ -90,6 +127,20 @@ export class BackgroundScene {
     }
     this.particles.geometry.attributes.position.needsUpdate = true;
     this.particles.rotation.z = this.progress * 0.15;
+
+    // Animate 3D Triangles
+    if (this.triangles) {
+      for (const mesh of this.triangles) {
+        mesh.rotation.x += mesh.userData.rotSpeedX;
+        mesh.rotation.y += mesh.userData.rotSpeedY;
+        mesh.rotation.z += mesh.userData.rotSpeedZ;
+        
+        mesh.position.x += mesh.userData.speed * delta * 0.3;
+        if (mesh.position.x > 10) {
+          mesh.position.x = -10;
+        }
+      }
+    }
   }
 
   render(renderer) {
