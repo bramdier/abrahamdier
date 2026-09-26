@@ -1,5 +1,6 @@
 import * as THREE from "three";
 import { COLORS } from "../data/colors.js";
+import { SLIDE_COUNT } from "../data/slides.js";
 
 const vertexShader = `
   varying vec2 vUv;
@@ -69,40 +70,48 @@ export class BackgroundScene {
     this.particleSpeeds = speeds;
     this.scene.add(this.particles);
 
-    // --- Floating 3D Triangles (Tetrahedrons) ---
+    // Orthographic camera only sees x/y in [-1, 1] and z in (-1, 0).
+    // One cluster per slide, all inside that view, so every page shows them.
     this.triangles = [];
-    const triangleCount = isMobile ? 8 : 15;
-    const triangleGeo = new THREE.TetrahedronGeometry(0.5);
+    const perPage = isMobile ? 1 : 2;
+    const triangleGeo = new THREE.TetrahedronGeometry(0.14);
     const triangleMat = new THREE.MeshBasicMaterial({
-      color: 0x9a442d,
+      color: COLORS.accent,
       wireframe: true,
       transparent: true,
-      opacity: 0.15,
+      opacity: 0.55,
+      depthWrite: false,
     });
 
-    for (let i = 0; i < triangleCount; i++) {
-      const mesh = new THREE.Mesh(triangleGeo, triangleMat);
-      
-      // Random position
-      mesh.position.x = (Math.random() - 0.5) * 20;
-      mesh.position.y = (Math.random() - 0.5) * 12;
-      mesh.position.z = (Math.random() - 0.5) * 4;
-      
-      // Random rotation
-      mesh.rotation.x = Math.random() * Math.PI;
-      mesh.rotation.y = Math.random() * Math.PI;
-      mesh.rotation.z = Math.random() * Math.PI;
-      
-      // Random speed for animation
-      mesh.userData = {
-        speed: 0.1 + Math.random() * 0.3,
-        rotSpeedX: (Math.random() - 0.5) * 0.02,
-        rotSpeedY: (Math.random() - 0.5) * 0.02,
-        rotSpeedZ: (Math.random() - 0.5) * 0.02
-      };
-      
-      this.triangles.push(mesh);
-      this.scene.add(mesh);
+    for (let page = 0; page < SLIDE_COUNT; page++) {
+      for (let i = 0; i < perPage; i++) {
+        const mesh = new THREE.Mesh(triangleGeo, triangleMat);
+        const slot = page * perPage + i;
+        const cols = isMobile ? 3 : 4;
+        const col = slot % cols;
+        const row = Math.floor(slot / cols);
+        const rows = Math.ceil((SLIDE_COUNT * perPage) / cols);
+
+        mesh.position.x = -0.78 + ((col + 0.35 + Math.random() * 0.3) / cols) * 1.56;
+        mesh.position.y = 0.72 - ((row + 0.35 + Math.random() * 0.3) / rows) * 1.44;
+        mesh.position.z = -0.35 - Math.random() * 0.45;
+
+        mesh.scale.setScalar(0.75 + Math.random() * 0.7);
+        mesh.rotation.x = Math.random() * Math.PI;
+        mesh.rotation.y = Math.random() * Math.PI;
+        mesh.rotation.z = Math.random() * Math.PI;
+
+        mesh.userData = {
+          rotSpeedX: (Math.random() - 0.5) * 0.012,
+          rotSpeedY: (Math.random() - 0.5) * 0.012,
+          rotSpeedZ: (Math.random() - 0.5) * 0.012,
+          driftX: (Math.random() - 0.5) * 0.05,
+          driftY: (Math.random() - 0.5) * 0.04,
+        };
+
+        this.triangles.push(mesh);
+        this.scene.add(mesh);
+      }
     }
   }
 
@@ -134,11 +143,13 @@ export class BackgroundScene {
         mesh.rotation.x += mesh.userData.rotSpeedX;
         mesh.rotation.y += mesh.userData.rotSpeedY;
         mesh.rotation.z += mesh.userData.rotSpeedZ;
-        
-        mesh.position.x += mesh.userData.speed * delta * 0.3;
-        if (mesh.position.x > 10) {
-          mesh.position.x = -10;
-        }
+
+        mesh.position.x += mesh.userData.driftX * delta;
+        mesh.position.y += mesh.userData.driftY * delta;
+        if (mesh.position.x > 0.92) mesh.position.x = -0.92;
+        if (mesh.position.x < -0.92) mesh.position.x = 0.92;
+        if (mesh.position.y > 0.88) mesh.position.y = -0.88;
+        if (mesh.position.y < -0.88) mesh.position.y = 0.88;
       }
     }
   }

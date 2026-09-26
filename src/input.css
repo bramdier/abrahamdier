@@ -337,6 +337,11 @@
     }
   }
 
+  .about-card {
+    background-color: #ffffff;
+    outline: 1px solid rgba(196, 198, 205, 0.15);
+  }
+
   .process-flow {
     list-style: none;
     margin: 0.5rem 0 1.25rem;
