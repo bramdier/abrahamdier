@@ -111,13 +111,13 @@ export const BUILT_PROJECTS = [
     link: "https://tcontinent.com/",
   },
   {
-    id: "maleo-aviation",
-    title: "Maleo Aviation",
+    id: "soes-sorgawi",
+    title: "Landing Page for Soes Sorgawi",
     company: null,
     year: null,
-    description: "Ground handling company profile website.",
-    tags: ["Aviation", "Web"],
-    link: "https://maleoaviation.com/",
+    description: "Landing page for Soes Sorgawi",
+    tags: ["Food", "Web"],
+    link: "https://soessorgawi.industries.my.id/",
   },
   {
     id: "eprocurement",
