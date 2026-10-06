@@ -130,46 +130,32 @@
     pointer-events: auto;
   }
 
-  .gorilla-btn {
-    text-decoration: none;
-    perspective: 1000px;
-  }
-
-  .gorilla-3d-wrapper {
-    width: 3.5rem;
-    height: 3.5rem;
-    background: linear-gradient(135deg, #fc9174, #9a442d);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 
-      0 10px 20px rgba(4, 22, 39, 0.2),
-      inset 0 4px 6px rgba(255, 255, 255, 0.4),
-      inset 0 -4px 6px rgba(0, 0, 0, 0.2);
-    transform: rotateX(15deg) rotateY(-15deg);
-    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
-    transform-style: preserve-3d;
-  }
-
-  .gorilla-emoji {
-    font-size: 1.75rem;
-    transform: translateZ(20px);
+  .ram-btn {
     display: block;
-    filter: drop-shadow(0 4px 4px rgba(0,0,0,0.3));
-    transition: transform 0.3s ease;
+    width: 4.75rem;
+    height: 4.75rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
   }
 
-  .gorilla-btn:hover .gorilla-3d-wrapper {
-    transform: rotateX(0deg) rotateY(0deg) scale(1.1);
-    box-shadow: 
-      0 15px 25px rgba(4, 22, 39, 0.3),
-      inset 0 4px 6px rgba(255, 255, 255, 0.5),
-      inset 0 -4px 6px rgba(0, 0, 0, 0.2);
+  .ram-btn:hover,
+  .ram-btn:focus-visible {
+    transform: scale(1.06);
   }
 
-  .gorilla-btn:hover .gorilla-emoji {
-    transform: translateZ(30px) scale(1.1);
+  .ram-btn:focus-visible {
+    outline: 2px solid #9a442d;
+    outline-offset: 3px;
+    border-radius: 0.35rem;
+  }
+
+  .ram-icon {
+    display: block;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    filter: drop-shadow(0 12px 14px rgba(4, 22, 39, 0.22));
   }
 
   .whatsapp-float {
@@ -680,6 +666,10 @@
     }
 
     .text-mark {
+      transition: none;
+    }
+
+    .ram-btn {
       transition: none;
     }
   }

@@ -10,6 +10,7 @@ import { initHorizontalScroll } from "./scroll/horizontalScroll.js";
 import { createLenis } from "./scroll/lenisSetup.js";
 import { renderProjectLists } from "./ui/renderProjectLists.js";
 import { initWhatsappPicker } from "./ui/whatsappPicker.js";
+import { initRamIcon } from "./webgl/ramIcon.js";
 import { SceneManager } from "./webgl/SceneManager.js";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -18,6 +19,7 @@ const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matc
 
 async function bootstrap() {
   await loadLayout();
+  initRamIcon(document.getElementById("ram-icon"), { reducedMotion });
   renderProjectLists();
   initWhatsappPicker();
 
