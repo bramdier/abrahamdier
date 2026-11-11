@@ -15,7 +15,7 @@ function waUrl(message) {
 export function initWhatsappPicker() {
   const trigger = document.querySelector(".whatsapp-float");
   const picker = document.getElementById("whatsapp-picker");
-  if (!trigger || !picker) return;
+  if (!trigger || !picker) return () => {};
 
   const closeBtn = picker.querySelector(".whatsapp-picker__close");
   const firstOption = picker.querySelector("[data-wa-topic]");
@@ -45,7 +45,7 @@ export function initWhatsappPicker() {
     picker.setAttribute("aria-hidden", "true");
     document.body.classList.remove("wa-picker-open");
     document.removeEventListener("keydown", onKeyDown);
-    trigger.focus();
+    if (trigger.getAttribute("aria-hidden") !== "true") trigger.focus();
   }
 
   function onKeyDown(e) {
@@ -90,6 +90,8 @@ export function initWhatsappPicker() {
     window.open(waUrl(message), "_blank", "noopener,noreferrer");
     close();
   });
+
+  return close;
 }
 
 export { TOPICS, waUrl };

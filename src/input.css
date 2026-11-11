@@ -100,6 +100,119 @@
     overflow: hidden;
   }
 
+  #hero {
+    position: relative;
+  }
+
+  .hero-knockout {
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+  }
+
+  .hero-stage {
+    position: relative;
+    z-index: 1;
+    width: min(100%, 76rem);
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  .hero-kicker {
+    margin-bottom: 1.15rem;
+    font-family: "Manrope", sans-serif;
+    font-weight: 800;
+    font-size: clamp(1.35rem, 2.4vw, 2rem);
+    letter-spacing: -0.03em;
+    color: #041627;
+  }
+
+  .hero-mark {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: clamp(0.85rem, 2vw, 1.75rem);
+    margin: 0;
+    font-size: clamp(2.75rem, 11vw, 9.5rem);
+  }
+
+  .hero-title {
+    position: relative;
+    margin: 0;
+    font-family: "Fredoka", "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 1em;
+    line-height: 0.76;
+    letter-spacing: -0.035em;
+    color: #e31b23;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .hero-title__line {
+    display: block;
+  }
+
+  .hero-title:hover .hero-title__line,
+  .hero-title:focus-visible .hero-title__line {
+    text-decoration-line: line-through;
+    text-decoration-thickness: 0.045em;
+    text-decoration-color: #ffd000;
+  }
+
+  .hero-title__note {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    display: block;
+    font-size: max(0.72rem, 0.145em);
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 0;
+    white-space: nowrap;
+    color: #041627;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(-115%);
+    transition: opacity 0.2s ease;
+  }
+
+  .hero-title:hover .hero-title__note,
+  .hero-title:focus-visible .hero-title__note {
+    opacity: 1;
+  }
+
+  .hero-portrait-frame {
+    flex: none;
+    pointer-events: none;
+    line-height: 0;
+  }
+
+  .hero-portrait {
+    display: block;
+    width: min(20rem, 40vw);
+    height: auto;
+    max-width: none;
+    user-select: none;
+    filter: url("#hero-knockout");
+  }
+
+  @media (max-width: 767px) {
+    .hero-mark {
+      font-size: clamp(2.15rem, 9.2vw, 3.1rem);
+    }
+
+    .hero-title {
+      line-height: 0.8;
+    }
+
+    .hero-portrait {
+      width: min(11rem, 42vw);
+    }
+  }
+
   @media (min-width: 768px) {
     .scroll-section {
       flex: 0 0 100vw;
@@ -158,23 +271,137 @@
     filter: drop-shadow(0 12px 14px rgba(4, 22, 39, 0.22));
   }
 
-  .whatsapp-float {
+  .contact-float {
     position: fixed;
     right: 1.5rem;
     bottom: 1.5rem;
-    z-index: 50;
+    z-index: 70;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .contact-float__toggle {
+    border: none;
+    padding: 0.35rem 0.15rem;
+    background: transparent;
+    color: #041627;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    line-height: 1;
+    text-transform: uppercase;
+    cursor: pointer;
+    perspective: 240px;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  .contact-float__toggle-word {
+    display: inline-block;
+    transform-origin: center;
+    transition:
+      transform 0.22s cubic-bezier(0.22, 1, 0.36, 1),
+      opacity 0.22s ease;
+  }
+
+  .contact-float__toggle-word.is-leaving {
+    transform: rotateX(90deg);
+    opacity: 0;
+  }
+
+  .contact-float__toggle-word.is-entering {
+    transform: rotateX(-90deg);
+    opacity: 0;
+    transition: none;
+  }
+
+  .contact-float__toggle:focus-visible {
+    outline: 2px solid #9a442d;
+    outline-offset: 3px;
+  }
+
+  .contact-float__flip {
+    width: 3.5rem;
+    height: 3.5rem;
+    flex: none;
+    perspective: 800px;
+    transition: transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .contact-float__flip:hover {
+    transform: scale(1.05);
+  }
+
+  .contact-float__card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .contact-float[data-mode="wa"] .contact-float__card {
+    transform: rotateY(180deg);
+  }
+
+  .contact-float__face {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+
+  .contact-float__face--front {
+    transform: rotateY(0deg);
+  }
+
+  .contact-float__face--back {
+    transform: rotateY(180deg);
+  }
+
+  .contact-float[data-mode="cv"] .contact-float__face--back,
+  .contact-float[data-mode="wa"] .contact-float__face--front {
+    pointer-events: none;
+  }
+
+  .contact-float__cv {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 3.5rem;
-    height: 3.5rem;
+    border-radius: 9999px;
+    background-color: #041627;
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    box-shadow:
+      0 24px 48px -12px rgba(26, 28, 28, 0.08),
+      0 4px 12px rgba(4, 22, 39, 0.25);
+    transition: background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .contact-float__cv:hover {
+    background-color: #0c2740;
+  }
+
+  .contact-float__cv:focus-visible {
+    outline: 2px solid #9a442d;
+    outline-offset: 3px;
+  }
+
+  .whatsapp-float {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 9999px;
     background-color: #25d366;
     color: #fff;
     box-shadow:
       0 24px 48px -12px rgba(26, 28, 28, 0.08),
       0 4px 12px rgba(37, 211, 102, 0.25);
-    transition: transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .whatsapp-float svg {
@@ -183,7 +410,6 @@
   }
 
   .whatsapp-float:hover {
-    transform: scale(1.05);
     background-color: #20bd5a;
   }
 
@@ -640,7 +866,7 @@
     height: 100%;
   }
 
-  body.modal-open .whatsapp-float {
+  body.modal-open .contact-float {
     opacity: 0;
     pointer-events: none;
   }
@@ -670,6 +896,12 @@
     }
 
     .ram-btn {
+      transition: none;
+    }
+
+    .contact-float__card,
+    .contact-float__toggle-word,
+    .contact-float__flip {
       transition: none;
     }
   }

@@ -12,7 +12,7 @@
   <link rel="icon" href="/logo_a.png" type="image/png" />
   <link rel="apple-touch-icon" href="/logo_a.png" />
   <link
-    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500&amp;family=Space+Grotesk:wght@400;500;700&amp;family=Poppins:wght@500;600;700&amp;display=swap"
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500&amp;family=Space+Grotesk:wght@400;500;700&amp;family=Poppins:wght@500;600;700&amp;family=Fredoka:wght@600;700&amp;display=swap"
     rel="stylesheet" />
 </head>
 
@@ -29,11 +29,28 @@
 
       <!-- 01 Hero -->
       <section class="scroll-section is-active" id="hero" data-slide="hero" role="region" aria-label="Introduction">
-        <div class="slide-content max-w-3xl w-full">
+        <svg class="hero-knockout" aria-hidden="true" width="0" height="0">
+          <filter id="hero-knockout" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0.333 0.333 0.333 0 0" result="keyed" />
+            <feComponentTransfer in="keyed" result="keyed2">
+              <feFuncA type="table" tableValues="1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 0.15 0" />
+            </feComponentTransfer>
+            <feComposite in="keyed2" in2="SourceGraphic" operator="in" />
+          </filter>
+        </svg>
+        <div class="slide-content hero-stage">
           <p class="label-text text-xs uppercase tracking-widest text-secondary mb-4 slide-meta hidden">01 — Intro</p>
-          <h1 class="text-4xl md:text-5xl font-black text-primary tracking-tight mb-4">Abraham Dier Spiez - Software Engineer</h1>
-          <h2 class="text-xl font-semibold text-primary mb-8">Build Scalable and Efficient Software Solutions</h2>
-          <p class="text-on-surface-variant leading-7 mb-8 max-w-2xl"><span class="label-text text-sm tracking-wide text-primary uppercase">Available for</span><br>System Architecture · IT Consulting · Enterprise Solutions · System Integration · Infrastructure &amp; Automation</p>
+          <p class="hero-kicker">Abraham Dier Spiez</p>
+          <div class="hero-mark">
+            <h1 class="hero-title">
+              <span class="hero-title__note" aria-hidden="true">kang review AI</span>
+              <span class="hero-title__line">Software</span>
+              <span class="hero-title__line">Engineer</span>
+            </h1>
+            <div class="hero-portrait-frame">
+              <img class="hero-portrait" src="/portrait.jpg" alt="" aria-hidden="true" />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -155,18 +172,36 @@
     </div>
   </div>
 
-  <a
-    class="whatsapp-float"
-    href="https://wa.me/6282274583689?text=Hi%20Abraham%2C%20I%27d%20like%20to%20get%20in%20touch."
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Chat on WhatsApp"
-    aria-haspopup="dialog"
-    aria-controls="whatsapp-picker">
-    <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.883 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-    </svg>
-  </a>
+  <div class="contact-float" data-mode="cv">
+    <button type="button" class="contact-float__toggle label-text" aria-label="Show WhatsApp">
+      <span class="contact-float__toggle-word" data-toggle-label>WhatsApp</span>
+    </button>
+    <div class="contact-float__flip">
+      <div class="contact-float__card">
+        <a
+          class="contact-float__cv contact-float__face contact-float__face--front label-text"
+          href="/Abraham-Dier-Spiez-CV.pdf"
+          download="Abraham-Dier-Spiez-CV.pdf"
+          aria-label="Download CV">
+          CV
+        </a>
+        <a
+          class="whatsapp-float contact-float__face contact-float__face--back"
+          href="https://wa.me/6282274583689?text=Hi%20Abraham%2C%20I%27d%20like%20to%20get%20in%20touch."
+          target="_blank"
+          rel="noopener noreferrer"
+          tabindex="-1"
+          aria-hidden="true"
+          aria-label="Chat on WhatsApp"
+          aria-haspopup="dialog"
+          aria-controls="whatsapp-picker">
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.883 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
 
   <div
     id="whatsapp-picker"

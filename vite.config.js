@@ -9,8 +9,10 @@ const STATIC_FILES = [
   "robots.txt",
   "sitemap.xml",
   "logo_a.png",
+  "portrait.jpg",
   "hero.JPG",
   "hero_2.jpg",
+  "Abraham-Dier-Spiez-CV.pdf",
 ];
 
 export default defineConfig({

@@ -9,6 +9,7 @@ import { initScrollNav } from "./nav/scrollNav.js";
 import { initHorizontalScroll } from "./scroll/horizontalScroll.js";
 import { createLenis } from "./scroll/lenisSetup.js";
 import { renderProjectLists } from "./ui/renderProjectLists.js";
+import { initContactFloat } from "./ui/contactFloat.js";
 import { initWhatsappPicker } from "./ui/whatsappPicker.js";
 import { initRamIcon } from "./webgl/ramIcon.js";
 import { SceneManager } from "./webgl/SceneManager.js";
@@ -21,7 +22,8 @@ async function bootstrap() {
   await loadLayout();
   initRamIcon(document.getElementById("ram-icon"), { reducedMotion });
   renderProjectLists();
-  initWhatsappPicker();
+  const closeWhatsappPicker = initWhatsappPicker();
+  initContactFloat(closeWhatsappPicker);
 
   const canvas = document.getElementById("webgl");
   let sceneManager = null;
